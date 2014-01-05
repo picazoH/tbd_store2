@@ -20,6 +20,24 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+
+  #gem 'datashift'
+  #gem 'datashift_spree'
+
+  #Enable admin store://require admin/spree_clean
+  #gem 'spree_clean', :git => "https://github.com/spree/spree_clean.git", :tag => 'v1.0.6'
+  #gem "capistrano", "~> 2.15.4"
+  #gem "rvm-capistrano", "~> 1.5.1"
+
+  gem 'zeus', '0.13.4.pre2'
+end
+
+group :test do
+  gem 'capybara','2.1.0'
+  gem 'cucumber-rails','1.3.0', :require => false
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
