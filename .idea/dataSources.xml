@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="2834058806">
-    <data-source source="LOCAL" name="Rails tbd_store2: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="46c9908b-814b-4c2e-bb71-c36b651d0675">
+    <data-source source="LOCAL" name="Rails tbd_store2: test" uuid="46c9908b-814b-4c2e-bb71-c36b651d0675">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:tbd_store2_test</jdbc-url>
       <user-name>tbd_store2</user-name>
@@ -14,7 +15,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails tbd_store2: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="44acf752-1dc7-43ff-aede-523de137ea9e">
+    <data-source source="LOCAL" name="Rails tbd_store2: development" uuid="44acf752-1dc7-43ff-aede-523de137ea9e">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/tbd_store2_development</jdbc-url>
       <libraries>
@@ -26,7 +28,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails tbd_store2: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="1c8d4691-eada-40ae-af40-addf2a9bcaa1">
+    <data-source source="LOCAL" name="Rails tbd_store2: production" uuid="1c8d4691-eada-40ae-af40-addf2a9bcaa1">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:tbd_store2_production</jdbc-url>
       <user-name>tbd_store2</user-name>
