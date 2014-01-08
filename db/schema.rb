@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140102136045) do
+ActiveRecord::Schema.define(:version => 20140107231108) do
 
   create_table "spree_activator_translations", :force => true do |t|
     t.integer  "spree_activator_id"
@@ -163,6 +163,22 @@ ActiveRecord::Schema.define(:version => 20140102136045) do
   add_index "spree_inventory_units", ["shipment_id"], :name => "index_inventory_units_on_shipment_id"
   add_index "spree_inventory_units", ["variant_id"], :name => "index_inventory_units_on_variant_id"
 
+  create_table "spree_kiala_points", :force => true do |t|
+    t.integer  "shortkpid",                    :null => false
+    t.integer  "order_id",                     :null => false
+    t.string   "kpname",       :limit => 50
+    t.string   "street",       :limit => 300
+    t.string   "zip",          :limit => 10
+    t.string   "city",         :limit => 50
+    t.string   "locationhint", :limit => 4000
+    t.string   "openinghours", :limit => 167
+    t.string   "label",        :limit => 30
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
+  add_index "spree_kiala_points", ["order_id"], :name => "index_kialaLS_on_order_id"
+
   create_table "spree_line_items", :force => true do |t|
     t.integer  "variant_id"
     t.integer  "order_id"
@@ -211,6 +227,17 @@ ActiveRecord::Schema.define(:version => 20140102136045) do
     t.integer "option_type_id"
   end
 
+  create_table "spree_option_value_translations", :force => true do |t|
+    t.integer  "spree_option_value_id"
+    t.string   "locale"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "presentation"
+  end
+
+  add_index "spree_option_value_translations", ["locale"], :name => "index_spree_option_value_translations_on_locale"
+  add_index "spree_option_value_translations", ["spree_option_value_id"], :name => "index_spree_option_value_translations_on_spree_option_value_id"
+
   create_table "spree_option_values", :force => true do |t|
     t.integer  "position"
     t.string   "name"
@@ -250,6 +277,7 @@ ActiveRecord::Schema.define(:version => 20140102136045) do
     t.string   "last_ip_address"
     t.integer  "created_by_id"
     t.string   "channel",                                                           :default => "spree"
+    t.string   "locale"
   end
 
   add_index "spree_orders", ["completed_at"], :name => "index_spree_orders_on_completed_at"
@@ -319,6 +347,17 @@ ActiveRecord::Schema.define(:version => 20140102136045) do
   end
 
   add_index "spree_product_properties", ["product_id"], :name => "index_product_properties_on_product_id"
+
+  create_table "spree_product_property_translations", :force => true do |t|
+    t.integer  "spree_product_property_id"
+    t.string   "locale"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "value"
+  end
+
+  add_index "spree_product_property_translations", ["locale"], :name => "index_spree_product_property_translations_on_locale"
+  add_index "spree_product_property_translations", ["spree_product_property_id"], :name => "index_0968f57fbd8fb9f31050820cbb66109a266c516a"
 
   create_table "spree_product_translations", :force => true do |t|
     t.integer  "spree_product_id"

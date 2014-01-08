@@ -38,7 +38,37 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <RunnerSettings RunnerId="RubyDebugRunner" />
+      <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="db:rollback: tbd_store2" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="tbd_store2" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="development" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:rollback" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="1" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
   </component>
@@ -51,6 +81,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.16, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.16, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="active_merchant_sermepa (v0.1.1, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="active_utils (v2.0.1, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemerchant (v1.42.2, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.16, RVM: ruby-2.0.0-p353) [gem]" level="application" />
@@ -128,16 +159,18 @@
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="savon (v1.2.0, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="select2-rails (v3.4.9, RVM: ruby-2.0.0-p353) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree (v2.0.8.beta@fad49b, RVM: ruby-2.0.0-p353) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree_api (v2.0.8.beta@fad49b, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree (v2.0.8.beta@9c3a61, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_api (v2.0.8.beta@9c3a61, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spree_auth_devise (v2.0.0@322486, RVM: ruby-2.0.0-p353) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree_backend (v2.0.8.beta@fad49b, RVM: ruby-2.0.0-p353) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree_cmd (v2.0.8.beta@fad49b, RVM: ruby-2.0.0-p353) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree_core (v2.0.8.beta@fad49b, RVM: ruby-2.0.0-p353) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree_frontend (v2.0.8.beta@fad49b, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_backend (v2.0.8.beta@9c3a61, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_cmd (v2.0.8.beta@9c3a61, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_core (v2.0.8.beta@9c3a61, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_frontend (v2.0.8.beta@9c3a61, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spree_gateway (v2.1.0.beta@b0cb89, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spree_i18n (v3.1.0.beta@ece752, RVM: ruby-2.0.0-p353) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree_sample (v2.0.8.beta@fad49b, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_kiala (v0.1.0, /Users/hector/Projects/spree_kiala) [path][gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_sample (v2.0.8.beta@9c3a61, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_sermepa (v2.0.0, /Users/hector/Projects/spree_sermepa) [path][gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="state_machine (v1.2.0, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stringex (v1.5.1, RVM: ruby-2.0.0-p353) [gem]" level="application" />

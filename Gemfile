@@ -55,6 +55,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+#OFFICIAL
+
 gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-0-stable'
 
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
@@ -63,4 +65,11 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 #i18n
 gem 'spree_i18n', :git => 'https://github.com/spree/spree_i18n.git', :branch => '2-0-stable'
 
+#NOT OFFICIAL
 
+#2BEDIGITAL
+#gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'
+gem 'spree_kiala', :path => '../spree_kiala'
+
+#gem 'spree_sermepa', :git => 'https://github.com/picazoH/spree_sermepa.git', :branch => 'master'
+gem 'spree_sermepa', :path => '../spree_sermepa'

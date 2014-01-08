@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/spree/spree.git
-  revision: fad49bc55e5a525540291057cea3c859b13e6e53
+  revision: 9c3a61024d8c1b36bd93d62614d155a7c6069a49
   branch: 2-0-stable
   specs:
     spree (2.0.8.beta)
@@ -84,6 +84,19 @@ GIT
       rails-i18n (~> 0.7.3)
       spree_core (~> 2.0.0)
 
+PATH
+  remote: ../spree_kiala
+  specs:
+    spree_kiala (0.1.0)
+      spree_core (~> 2.0.0)
+
+PATH
+  remote: ../spree_sermepa
+  specs:
+    spree_sermepa (2.0.0)
+      active_merchant_sermepa (>= 0.1.1)
+      spree_core (~> 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -100,6 +113,8 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    active_merchant_sermepa (0.1.1)
+      activemerchant (>= 1.9.4)
     active_utils (2.0.1)
       activesupport (>= 2.3.11)
       i18n
@@ -337,5 +352,7 @@ DEPENDENCIES
   spree_auth_devise!
   spree_gateway!
   spree_i18n!
+  spree_kiala!
+  spree_sermepa!
   uglifier (>= 1.0.3)
   zeus (= 0.13.4.pre2)
