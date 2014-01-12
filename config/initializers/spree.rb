@@ -9,6 +9,22 @@ Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
+  config.site_url = "store.2bedigital.com"
+  config.site_name = 'tienda 2beDigital demo'
+  config.default_country_id = 175
+  config.admin_interface_logo = 'admin/admin_tobe_bg.png'
+  config.logo = '2bD-logo.png'
+  config.allow_ssl_in_production = false
+  #SpreeSocialProducts Spree::Config.facebook_app_id = '572946162728681' Rails console
+  config.address_requires_state = true
+  config.allow_guest_checkout = false
+  config.products_per_page = 12
+  config.company = true
+
+  #inventory, stocks, shipping
+  config.track_inventory_levels = false
+  config.allow_backorder_shipping = true
+  config.shipping_instructions = true
 end
 
 #Spree.user_class = "Spree::LegacyUser"

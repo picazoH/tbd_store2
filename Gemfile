@@ -41,6 +41,7 @@ end
 
 group :production do
   gem 'puma'
+  gem 'newrelic_rpm'
   #gem 'therubyracer' no need it we have nodejs, only required for 0.70.x or later
 end
 
