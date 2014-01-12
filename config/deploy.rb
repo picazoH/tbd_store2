@@ -4,7 +4,7 @@ set :user, 'deploy'
 
 set :deploy_to, '/data/spree'
 set :log_level, :debug
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/newrelic.yml}
 set :linked_dirs, %w{tmp/sockets log config/puma public/spree}
 set :sockets_path, Pathname.new("#{fetch(:deploy_to)}/shared/tmp/sockets/")
 
