@@ -74,12 +74,12 @@ gem 'spree_i18n', :git => 'https://github.com/spree/spree_i18n.git', :branch => 
 #NOT OFFICIAL
 
 #2BEDIGITAL
-#gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'
-gem 'spree_kiala', :path => '../spree_kiala'
+gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'
+#gem 'spree_kiala', :path => '../spree_kiala'
 
-#gem 'spree_sermepa', :git => 'https://github.com/picazoH/spree_sermepa.git', :branch => 'master'
-gem 'spree_sermepa', :path => '../spree_sermepa'
+gem 'spree_sermepa', :git => 'https://github.com/picazoH/spree_sermepa.git', :branch => 'master'
+#gem 'spree_sermepa', :path => '../spree_sermepa'
 
-#gem 'spree_variant_all_options', :git => 'https://github.com/picazoH/spree_variant_all_options.git', :branch => 'master'
-gem 'spree_variant_all_options', :path => '../spree/spree_variant_all_options'
+gem 'spree_variant_all_options', :git => 'https://github.com/picazoH/spree_variant_all_options.git', :branch => 'master'
+#gem 'spree_variant_all_options', :path => '../spree/spree_variant_all_options'
 
