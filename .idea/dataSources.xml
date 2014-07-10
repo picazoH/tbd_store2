@@ -31,8 +31,9 @@
     <data-source source="LOCAL" name="Rails tbd_store2: production" uuid="1c8d4691-eada-40ae-af40-addf2a9bcaa1">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:tbd_store2_production</jdbc-url>
-      <user-name>tbd_store2</user-name>
+      <jdbc-url>jdbc:mysql://tobedigitalrds.cgkfpkn2wrxp.eu-west-1.rds.amazonaws.com:3306/quesostrad_store_production</jdbc-url>
+      <user-name>tobeDigitalDB</user-name>
+      <user-password>df9fdfefdfdcdfcbdfc4dfdfdf98dfcf</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>

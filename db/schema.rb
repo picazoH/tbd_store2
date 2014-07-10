@@ -227,17 +227,6 @@ ActiveRecord::Schema.define(:version => 20140107231108) do
     t.integer "option_type_id"
   end
 
-  create_table "spree_option_value_translations", :force => true do |t|
-    t.integer  "spree_option_value_id"
-    t.string   "locale"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
-    t.string   "presentation"
-  end
-
-  add_index "spree_option_value_translations", ["locale"], :name => "index_spree_option_value_translations_on_locale"
-  add_index "spree_option_value_translations", ["spree_option_value_id"], :name => "index_spree_option_value_translations_on_spree_option_value_id"
-
   create_table "spree_option_values", :force => true do |t|
     t.integer  "position"
     t.string   "name"
@@ -347,17 +336,6 @@ ActiveRecord::Schema.define(:version => 20140107231108) do
   end
 
   add_index "spree_product_properties", ["product_id"], :name => "index_product_properties_on_product_id"
-
-  create_table "spree_product_property_translations", :force => true do |t|
-    t.integer  "spree_product_property_id"
-    t.string   "locale"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.string   "value"
-  end
-
-  add_index "spree_product_property_translations", ["locale"], :name => "index_spree_product_property_translations_on_locale"
-  add_index "spree_product_property_translations", ["spree_product_property_id"], :name => "index_0968f57fbd8fb9f31050820cbb66109a266c516a"
 
   create_table "spree_product_translations", :force => true do |t|
     t.integer  "spree_product_id"
@@ -777,8 +755,8 @@ ActiveRecord::Schema.define(:version => 20140107231108) do
     t.boolean  "is_master",                                     :default => false
     t.integer  "product_id"
     t.decimal  "cost_price",      :precision => 8, :scale => 2
-    t.integer  "position"
     t.string   "cost_currency"
+    t.integer  "position"
     t.boolean  "track_inventory",                               :default => true
   end
 
