@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140107231108) do
+ActiveRecord::Schema.define(:version => 20140712163423) do
 
   create_table "spree_activator_translations", :force => true do |t|
     t.integer  "spree_activator_id"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20140107231108) do
   end
 
   add_index "spree_adjustments", ["adjustable_id"], :name => "index_adjustments_on_order_id"
+  add_index "spree_adjustments", ["source_type", "source_id"], :name => "index_spree_adjustments_on_source_type_and_source_id"
 
   create_table "spree_assets", :force => true do |t|
     t.integer  "viewable_id"
@@ -227,6 +228,18 @@ ActiveRecord::Schema.define(:version => 20140107231108) do
     t.integer "option_type_id"
   end
 
+  create_table "spree_option_value_translations", :force => true do |t|
+    t.integer  "spree_option_value_id"
+    t.string   "locale"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "name"
+    t.string   "presentation"
+  end
+
+  add_index "spree_option_value_translations", ["locale"], :name => "index_spree_option_value_translations_on_locale"
+  add_index "spree_option_value_translations", ["spree_option_value_id"], :name => "index_spree_option_value_translations_on_spree_option_value_id"
+
   create_table "spree_option_values", :force => true do |t|
     t.integer  "position"
     t.string   "name"
@@ -271,6 +284,7 @@ ActiveRecord::Schema.define(:version => 20140107231108) do
 
   add_index "spree_orders", ["completed_at"], :name => "index_spree_orders_on_completed_at"
   add_index "spree_orders", ["number"], :name => "index_spree_orders_on_number"
+  add_index "spree_orders", ["user_id", "created_by_id"], :name => "index_spree_orders_on_user_id_and_created_by_id"
 
   create_table "spree_payment_methods", :force => true do |t|
     t.string   "type"
@@ -317,6 +331,8 @@ ActiveRecord::Schema.define(:version => 20140107231108) do
     t.decimal "amount",     :precision => 8, :scale => 2
     t.string  "currency"
   end
+
+  add_index "spree_prices", ["variant_id", "currency"], :name => "index_spree_prices_on_variant_id_and_currency"
 
   create_table "spree_product_option_types", :force => true do |t|
     t.integer  "position"
@@ -747,7 +763,7 @@ ActiveRecord::Schema.define(:version => 20140107231108) do
 
   create_table "spree_variants", :force => true do |t|
     t.string   "sku",                                           :default => "",    :null => false
-    t.decimal  "weight",          :precision => 8, :scale => 2
+    t.decimal  "weight",          :precision => 8, :scale => 2, :default => 0.0
     t.decimal  "height",          :precision => 8, :scale => 2
     t.decimal  "width",           :precision => 8, :scale => 2
     t.decimal  "depth",           :precision => 8, :scale => 2
