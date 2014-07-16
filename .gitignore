@@ -26,6 +26,7 @@
 .loadpath
 .project
 bin/*
+.idea/*
 public/dispatch.cgi
 public/dispatch.fcgi
 public/dispatch.rb

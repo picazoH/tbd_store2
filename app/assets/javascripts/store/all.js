@@ -9,4 +9,5 @@
 
 //= require store/spree_frontend
 //= require store/spree_i18n
+//= require bootstrap
 //= require_tree .
