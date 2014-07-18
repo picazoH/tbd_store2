@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140712163423) do
+ActiveRecord::Schema.define(:version => 20140718165043) do
 
   create_table "spree_activator_translations", :force => true do |t|
     t.integer  "spree_activator_id"
@@ -285,6 +285,27 @@ ActiveRecord::Schema.define(:version => 20140712163423) do
   add_index "spree_orders", ["completed_at"], :name => "index_spree_orders_on_completed_at"
   add_index "spree_orders", ["number"], :name => "index_spree_orders_on_number"
   add_index "spree_orders", ["user_id", "created_by_id"], :name => "index_spree_orders_on_user_id_and_created_by_id"
+
+  create_table "spree_pages", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "slug"
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+    t.boolean  "show_in_header",           :default => false, :null => false
+    t.boolean  "show_in_footer",           :default => false, :null => false
+    t.string   "foreign_link"
+    t.integer  "position",                 :default => 1,     :null => false
+    t.boolean  "visible",                  :default => true
+    t.string   "meta_keywords"
+    t.string   "meta_description"
+    t.string   "layout"
+    t.boolean  "show_in_sidebar",          :default => false, :null => false
+    t.string   "meta_title"
+    t.boolean  "render_layout_as_partial", :default => false
+  end
+
+  add_index "spree_pages", ["slug"], :name => "index_spree_pages_on_slug"
 
   create_table "spree_payment_methods", :force => true do |t|
     t.string   "type"

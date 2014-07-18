@@ -109,6 +109,22 @@ GIT
       rails-i18n (~> 3.0.0)
       spree_core (~> 2.0.0)
 
+GIT
+  remote: https://github.com/spree/spree_social_products.git
+  revision: 18881d9700111fd40609227a8ff14bccb2813a12
+  branch: 2-0-stable
+  specs:
+    spree_social_products (2.0)
+      spree_core (~> 2.0)
+
+GIT
+  remote: https://github.com/spree/spree_static_content
+  revision: 8307179e5e645e241948f85465d5cc04980718e8
+  branch: 2-0-stable
+  specs:
+    spree_static_content (2.0.7.beta)
+      spree_core (~> 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -398,6 +414,8 @@ DEPENDENCIES
   spree_i18n!
   spree_kiala!
   spree_sermepa!
+  spree_social_products!
+  spree_static_content!
   spree_variant_all_options!
   uglifier (>= 1.0.3)
   zeus (= 0.13.4.pre2)

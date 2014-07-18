@@ -11,3 +11,4 @@
 //= require store/spree_i18n
 //= require bootstrap
 //= require_tree .
+//= require store/spree_social_products

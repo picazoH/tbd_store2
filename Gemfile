@@ -81,7 +81,9 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 #i18n
 gem 'spree_i18n', :git => 'https://github.com/spree/spree_i18n.git', :branch => '2-0-stable'
 
-#gem 'spree_social_products', :git => 'https://github.com/spree/spree_social_products.git', :branch => '2-0-stable'
+gem 'spree_static_content', :git => 'https://github.com/spree/spree_static_content', :branch => '2-0-stable'
+
+gem 'spree_social_products', :git => 'https://github.com/spree/spree_social_products.git', :branch => '2-0-stable'
 
 #NOT OFFICIAL
 #gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us' :branch => '2-0-stable'
