@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140718165043) do
+ActiveRecord::Schema.define(:version => 20140720184521) do
 
   create_table "spree_activator_translations", :force => true do |t|
     t.integer  "spree_activator_id"
@@ -420,6 +420,7 @@ ActiveRecord::Schema.define(:version => 20140718165043) do
   create_table "spree_products_taxons", :force => true do |t|
     t.integer "product_id"
     t.integer "taxon_id"
+    t.integer "position",   :default => 0
   end
 
   add_index "spree_products_taxons", ["product_id"], :name => "index_spree_products_taxons_on_product_id"
@@ -577,6 +578,21 @@ ActiveRecord::Schema.define(:version => 20140718165043) do
     t.string   "payment_type"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "spree_slides", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.string   "link_url"
+    t.boolean  "published"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.integer  "position",           :default => 0, :null => false
+    t.integer  "product_id"
   end
 
   create_table "spree_state_changes", :force => true do |t|

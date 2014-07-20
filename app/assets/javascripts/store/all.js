@@ -12,3 +12,5 @@
 //= require bootstrap
 //= require_tree .
 //= require store/spree_social_products
+//= require store/spree_contact_us
+//= require jquery.nivo.slider.pack.js

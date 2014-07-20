@@ -39,6 +39,12 @@ set :bundle_flags, '--deployment'
     task :restart do
       invoke 'puma:restart'
     end
+
+    desc "Update the crontab file"
+    task :update_crontab, :roles => :db do
+      run "cd #{release_path} && whenever --update-crontab #{application}"
+    end
+
   end
 
   #namespace :spree_sample do
@@ -83,6 +89,9 @@ set :bundle_flags, '--deployment'
       end
     end
   end
+
+
+  after "deploy:symlink", "deploy:update_crontab"
 
 
 

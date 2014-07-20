@@ -3,3 +3,9 @@
 
 es:
   hello: "Hola Mundo"
+  ## spree_sort_products ##
+  save_sorted_order: "Guardar ordenación"
+  sort_products: "Ordenar productos"
+  sort_products_hint_message: "Arrastrar y soltar los productos para ordenar su posición y, a continuación, haga clic en el botón Guardar para guardar su posición."
+  sort_products_taxons_update_message: "Los productos han actualizado su orden con éxito!"
+  sort_taxon_products: "Ordenar Productos en un taxón:"

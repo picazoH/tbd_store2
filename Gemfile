@@ -86,18 +86,20 @@ gem 'spree_static_content', :git => 'https://github.com/spree/spree_static_conte
 gem 'spree_social_products', :git => 'https://github.com/spree/spree_social_products.git', :branch => '2-0-stable'
 
 #NOT OFFICIAL
-#gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us' :branch => '2-0-stable'
+gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us', :branch => '2-0-stable'
+
 #gem 'spree_product_zoom', :git => 'https://github.com/spree/spree_product_zoom.git', :branch => '2-0-stable'
 
-#gem 'jquery-dragsort-rails', '~> 1.0.0'
-#gem 'spree_sort_products' , :git => 'https://github.com/suryart/spree_sort_products.git', :branch => '2-0-stable'
+gem 'jquery-dragsort-rails', '~> 1.0.0'
+gem 'spree_sort_products' , :git => 'https://github.com/suryart/spree_sort_products.git', :branch => '2-0-stable'
 
-#gem 'spree_sitemap', :git => 'https://github.com/jdutil/spree_sitemap', :ref => "2c3ea846da6dd2edecd03f9a395008ea8c0cfe5b"
-#gem 'whenever', :require => false
+gem 'spree_sitemap', :git => 'https://github.com/jdutil/spree_sitemap', :ref => "2c3ea846da6dd2edecd03f9a395008ea8c0cfe5b"
+gem 'whenever', :require => false
 
 #gem 'spree_showcase', :git => 'https://github.com/daemonsy/spree_showcase.git', :branch => 'master'
-#gem 'spree_slider', :git => 'https://github.com/priviterag/spree_slider', :ref => '86d9f5d5f22dd5f98a2157e96b327338561f6f3c'
+
 # 'f60d33877a68836dbca6dcc4b5f61a6e5e8f063f' before 2.2 support
+gem 'spree_slider', :git => 'https://github.com/priviterag/spree_slider', :ref => '86d9f5d5f22dd5f98a2157e96b327338561f6f3c'
 
 #2BEDIGITAL
 gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'

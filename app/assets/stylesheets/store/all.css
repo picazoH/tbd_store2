@@ -4,4 +4,8 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *
  *= require store/styles.scss
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
