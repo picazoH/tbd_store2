@@ -13,4 +13,6 @@
 //= require_tree .
 //= require store/spree_social_products
 //= require store/spree_contact_us
+//= require spree/frontend/spree_store_locator
 //= require jquery.nivo.slider.pack.js
+//= require store/spree_product_zoom

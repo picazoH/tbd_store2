@@ -101,6 +101,15 @@ gem 'whenever', :require => false
 # 'f60d33877a68836dbca6dcc4b5f61a6e5e8f063f' before 2.2 support
 gem 'spree_slider', :git => 'https://github.com/priviterag/spree_slider', :ref => '86d9f5d5f22dd5f98a2157e96b327338561f6f3c'
 
+#gem 'spree_store_locator', :git => 'https://github.com/crowdint/spree_store_locator', :branch => '2-0-stable'
+gem 'geocoder'
+gem 'haml-rails'
+gem 'jbuilder'
+gem 'spree_store_locator', :path => '../spree_store_locator', :branch => '2-0-stable'
+#gem 'spree_store_locator', :git => 'https://github.com/picazoH/spree_store_locator.git', :branch => '2-0-stable'
+
+gem 'spree_product_zoom', :git => 'https://github.com/spree/spree_product_zoom.git', :branch => '2-0-stable'
+
 #2BEDIGITAL
 gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'
 #gem 'spree_kiala', :path => '../spree_kiala'

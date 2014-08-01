@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140720184521) do
+ActiveRecord::Schema.define(:version => 20140721182721) do
 
   create_table "spree_activator_translations", :force => true do |t|
     t.integer  "spree_activator_id"
@@ -668,6 +668,22 @@ ActiveRecord::Schema.define(:version => 20140720184521) do
   add_index "spree_stock_transfers", ["destination_location_id"], :name => "index_spree_stock_transfers_on_destination_location_id"
   add_index "spree_stock_transfers", ["number"], :name => "index_spree_stock_transfers_on_number"
   add_index "spree_stock_transfers", ["source_location_id"], :name => "index_spree_stock_transfers_on_source_location_id"
+
+  create_table "spree_stores", :force => true do |t|
+    t.string   "address1",   :default => "", :null => false
+    t.string   "address2"
+    t.string   "city",       :default => "", :null => false
+    t.string   "country",    :default => "", :null => false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "state",      :default => "", :null => false
+    t.string   "website"
+    t.string   "zip",        :default => "", :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
 
   create_table "spree_tax_categories", :force => true do |t|
     t.string   "name"
