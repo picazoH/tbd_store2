@@ -17,3 +17,7 @@
 #admin-menu ul {
     width: 120%;
 }
+
+form#edit_taxonomy_1.edit_taxonomy div.form-buttons.filter-actions.actions a.button.icon-remove{
+    display: none;
+}

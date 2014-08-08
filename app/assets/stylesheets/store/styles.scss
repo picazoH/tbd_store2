@@ -6,14 +6,16 @@
 
 //@import "bootstrap";
 
-// CSS3
+//Compass CSS3
 @import "compass/css3";
+//Compass Minimum Dimensions
+@import "compass/utilities/general/min";
 
 // Fonts import from remote
 @import url(//fonts.googleapis.com/css?family=Coustard|Roboto:400);
 
 // Import all the variables into the main css file.
-//@import './_variables'; // Must call explicit path or else extension integration tests cannot import file.;
+@import './_variables'; // Must call explicit path or else extension integration tests cannot import file.;
 
 //// I gather this file is a starting point for the project.
 //@import "bootstrap";

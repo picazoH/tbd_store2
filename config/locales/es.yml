@@ -9,3 +9,11 @@ es:
   sort_products_hint_message: "Arrastrar y soltar los productos para ordenar su posición y, a continuación, haga clic en el botón Guardar para guardar su posición."
   sort_products_taxons_update_message: "Los productos han actualizado su orden con éxito!"
   sort_taxon_products: "Ordenar Productos en un taxón:"
+  ## Kaminiari pagination ##
+  views:
+    pagination:
+      first: "&laquo; Primera"
+      last: "Última &raquo;"
+      previous: "&lsaquo; Anterior"
+      next: "Siguiente &rsaquo;"
+      truncate: "..."

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.17'
+gem 'rails', '3.2.18'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -73,6 +73,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 #OFFICIAL
+#089e7ffbe867034f444724e337f429dbc3b325cb.  1 august 2014
 gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-0-stable'
 
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
@@ -103,8 +104,8 @@ gem 'spree_slider', :git => 'https://github.com/priviterag/spree_slider', :ref =
 gem 'geocoder'
 gem 'haml-rails'
 gem 'jbuilder'
-gem 'spree_store_locator', :path => '../spree_store_locator', :branch => '2-0-stable'
-#gem 'spree_store_locator', :git => 'https://github.com/picazoH/spree_store_locator.git', :branch => '2-0-stable'
+#gem 'spree_store_locator', :path => '../spree_store_locator', :branch => '2-0-stable'
+gem 'spree_store_locator', :git => 'https://github.com/picazoH/spree_store_locator.git', :branch => '2-0-stable'
 
 
 #2BEDIGITAL
