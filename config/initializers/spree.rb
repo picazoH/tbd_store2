@@ -25,6 +25,8 @@ Spree.config do |config|
   config.track_inventory_levels = false
   config.allow_backorder_shipping = true
   config.shipping_instructions = true
+  config.currency =  "EUR"
+
 end
 
 #Spree.user_class = "Spree::LegacyUser"
