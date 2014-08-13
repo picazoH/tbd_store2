@@ -15,3 +15,4 @@
 //= require admin/spree_social_products
 //= require admin/spree_sort_products
 //= require spree/backend/spree_store_locator
+//= require admin/spree_editor

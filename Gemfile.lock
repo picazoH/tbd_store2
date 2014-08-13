@@ -124,6 +124,16 @@ GIT
       spree_frontend (~> 2.0.0)
 
 GIT
+  remote: https://github.com/spree/spree_editor.git
+  revision: 4312b29cc2705155b6150f5e8b174358100a9391
+  branch: 2-0-stable
+  specs:
+    spree_editor (2.2.0)
+      ckeditor (= 4.0.6)
+      spree_backend (~> 2.0.0)
+      tinymce-rails (~> 4.0.16)
+
+GIT
   remote: https://github.com/spree/spree_gateway.git
   revision: 8290aaa3001b88c1508762a2ffbebdf2a28ebcc2
   branch: 2-0-stable
@@ -254,6 +264,9 @@ GEM
       xpath (~> 2.0)
     chronic (0.10.2)
     chunky_png (1.3.1)
+    ckeditor (4.0.6)
+      mime-types
+      orm_adapter
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -433,6 +446,8 @@ GEM
     thor (0.19.1)
     tilt (1.4.1)
     tins (0.13.1)
+    tinymce-rails (4.0.28.2)
+      railties (>= 3.1.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -485,6 +500,7 @@ DEPENDENCIES
   spree!
   spree_auth_devise!
   spree_contact_us!
+  spree_editor!
   spree_gateway!
   spree_i18n!
   spree_kiala!

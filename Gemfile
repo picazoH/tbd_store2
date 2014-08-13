@@ -86,6 +86,8 @@ gem 'spree_static_content', :git => 'https://github.com/spree/spree_static_conte
 
 gem 'spree_social_products', :git => 'https://github.com/spree/spree_social_products.git', :branch => '2-0-stable'
 
+gem 'spree_editor', :git => 'https://github.com/spree/spree_editor.git', :branch => '2-0-stable'
+
 #NOT OFFICIAL
 gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us', :branch => '2-0-stable'
 
