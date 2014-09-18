@@ -66,7 +66,8 @@ set :bundle_flags, '--deployment'
     task :restart do
       on roles fetch(:puma_roles) do
         within release_path do
-          execute :bundle, "exec pumactl -S #{fetch(:puma_state)} restart"
+          #execute :bundle, "exec pumactl -S #{fetch(:puma_state)} restart"
+          execute "(kill -s SIGUSR1 $(ps -C ruby -F | grep '/puma' | awk {'print $2'})) || service puma-manager restart"
         end
       end
     end
