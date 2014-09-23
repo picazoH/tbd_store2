@@ -1,5 +1,5 @@
 Spree::Product.class_eval do
-  translates :name, :description, :meta_description, :meta_keywords, :permalink
+  #translates :name, :description, :meta_description, :meta_keywords, :permalink
 
   # for adding products which are closely related to existing ones
   # define "duplicate_extra" for site-specific actions, eg for additional fields

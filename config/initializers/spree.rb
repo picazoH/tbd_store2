@@ -8,11 +8,8 @@
 Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
-  # config.site_name = "Spree Demo Site"
-  config.site_url = "store.2bedigital.com"
-  config.site_name = 'tienda 2beDigital demo'
   config.default_country_id = 175
-  config.admin_interface_logo = 'admin/admin_tobe_bg.png'
+  config.admin_interface_logo = 'logo/admin_tobe_bg.png'
   config.logo = '2bD-logo.png'
   config.allow_ssl_in_production = false
   #SpreeSocialProducts Spree::Config.facebook_app_id = '572946162728681' Rails console
@@ -32,5 +29,5 @@ end
 #Spree.user_class = "Spree::LegacyUser"
 Spree.user_class = "Spree::User"
 
-SpreeI18n::Config.available_locales = [:es, :en] # displayed on translation forms
-SpreeI18n::Config.supported_locales = [:es, :en] # displayed on frontend select box
+SpreeI18n::Config.available_locales = [:es, :en, :fr] # displayed on translation forms
+SpreeI18n::Config.supported_locales = [:es, :en, :fr] # displayed on frontend select box

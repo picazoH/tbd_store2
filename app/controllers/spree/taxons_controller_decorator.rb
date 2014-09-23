@@ -1,9 +1,10 @@
 Spree::TaxonsController.class_eval do
+
   def show
     @taxon = Spree::Taxon.find_by_permalink!(params[:id])
     return unless @taxon
 
-    @searcher = build_searcher(params.merge(:taxon => @taxon.id))
+    @searcher = build_searcher(params.merge(taxon: @taxon.id, include_images: true))
 
     order = params[:order]
     case order
@@ -14,8 +15,8 @@ Spree::TaxonsController.class_eval do
       when "ascend_by_name" then @products = @searcher.retrieve_products.ascend_by_name
       when "descend_by_updated_at" then @products = @searcher.retrieve_products.descend_by_updated_at
       when "ascend_by_updated_at" then @products = @searcher.retrieve_products.ascend_by_updated_at
-      else @products = @searcher.retrieve_products.joins(:classifications).order("#{Spree::Classification.table_name}.position ASC").uniq
+      else @products = @searcher.retrieve_products
     end
-
+    @taxonomies = Spree::Taxonomy.includes(root: :children)
   end
 end

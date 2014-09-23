@@ -1,4 +1,4 @@
-SitemapGenerator::Sitemap.default_host = "http://#{Spree::Config[:site_url]}"
+SitemapGenerator::Sitemap.default_host = "http://#{Spree::Store.default.url}"
 
 ##
 ## If using Heroku or similar service where you want sitemaps to live in S3 you'll need to setup these settings.
@@ -8,8 +8,8 @@ SitemapGenerator::Sitemap.default_host = "http://#{Spree::Config[:site_url]}"
 # SitemapGenerator::Sitemap.public_path = 'tmp/'
 
 ## Store on S3 using Fog - Note must add fog to your Gemfile.
-# SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new({aws_access_key_id:     Spree::Config[:s3_access_key], 
-#                                                                     aws_secret_access_key: Spree::Config[:s3_secret], 
+# SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new({aws_access_key_id:     Spree::Config[:s3_access_key],
+#                                                                     aws_secret_access_key: Spree::Config[:s3_secret],
 #                                                                     fog_provider:          'AWS',
 #                                                                     fog_directory: Spree::Config[:s3_bucket]})
 
@@ -30,12 +30,12 @@ SitemapGenerator::Sitemap.add_links do
   #
   # Defaults: :priority => 0.5, :changefreq => 'weekly',
   #           :lastmod => Time.now, :host => default_host
-  # 
-  # 
+  #
+  #
   # Examples:
-  # 
+  #
   # Add '/articles'
-  #   
+  #
   #   add articles_path, :priority => 0.7, :changefreq => 'daily'
   #
   # Add individual articles:
@@ -43,7 +43,6 @@ SitemapGenerator::Sitemap.add_links do
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at
   #   end
-
   def add_products_multilingual(localeParam,options={})
     I18n.locale = localeParam
     active_products = Spree::Product.active
@@ -88,4 +87,5 @@ SitemapGenerator::Sitemap.add_links do
   add_taxons
   add_products_multilingual('es')
   add_products_multilingual('en')
+  add_pages
 end

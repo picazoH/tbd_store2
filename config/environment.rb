@@ -1,7 +1,5 @@
-# Load the rails application
+# Load the Rails application.
 require File.expand_path('../application', __FILE__)
 
-# Initialize the rails application
-TbdStore2::Application.initialize!
-
-ActiveRecord::Base.include_root_in_json = false
+# Initialize the Rails application.
+Rails.application.initialize!
