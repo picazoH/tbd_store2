@@ -24,7 +24,18 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+group :development do
+  gem 'spring'
+  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-bundler', '~> 1.1.3'
+  gem 'capistrano-rails', '~> 1.1.2'
+end
+
+group :production do
+  gem 'puma', '~> 2.9.1'
+  gem 'newrelic_rpm'
+  #gem 'therubyracer' no need it we have nodejs, only required for 0.70.x or later
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
