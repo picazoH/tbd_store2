@@ -33,6 +33,8 @@ module TbdStore2
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :es
 
+    # TO generate binstubs
+    # rake rails:update:bin
 
     #NEW S3 CONFIG with Paperclip
     # Paperclip::Attachment.default_options[:s3_protocol] = "http"
