@@ -27,10 +27,25 @@ module TbdStore2
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Madrid'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :es
+
+
+    #NEW S3 CONFIG with Paperclip
+    Paperclip::Attachment.default_options[:s3_protocol] = "http"
+    config.paperclip_defaults = {
+        :storage => :s3,
+        :s3_host_name => 's3-eu-west-1.amazonaws.com',
+        :s3_credentials => {
+            :bucket => 'raypa',
+            :access_key_id => ENV["S3_access_key_id"],
+            :secret_access_key => ENV["S3_secret_access_key"]
+        }
+    }
+
   end
+
 end

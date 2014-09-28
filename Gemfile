@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+# https://github.com/laserlemon/figaro , Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem 'figaro', '~> 1.0.0'
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 group :development do
   gem 'spring'

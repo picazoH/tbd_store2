@@ -11,7 +11,7 @@ Spree.config do |config|
   config.default_country_id = 175
   config.admin_interface_logo = 'logo/admin_tobe_bg.png'
   config.logo = '2bD-logo.png'
-  config.allow_ssl_in_production = false
+  config.allow_ssl_in_production = true
   #SpreeSocialProducts Spree::Config.facebook_app_id = '572946162728681' Rails console
   config.address_requires_state = true
   config.allow_guest_checkout = false
@@ -23,6 +23,15 @@ Spree.config do |config|
   config.allow_backorder_shipping = true
   config.shipping_instructions = true
   config.currency =  "EUR"
+
+  #Spree::Image config
+  Spree::Image.attachment_definitions[:attachment][:styles] = ActiveSupport::JSON.decode('{"mini":"48x48\u003E","small":"100x100\u003E","product":"240x240\u003E","large":"600x600\u003E"}').symbolize_keys!
+  # Split environments
+  # Spree::Image.attachment_definitions[:attachment][:path] = "/#{Rails.env}/:id/:style/:basename.:extension"
+  Spree::Image.attachment_definitions[:attachment][:path] = "images/:id/:style/:basename.:extension"
+  Spree::Image.attachment_definitions[:attachment][:url] = '/spree/products/:id/:style/:basename.:extension'
+  Spree::Image.attachment_definitions[:attachment][:default_url] = ''
+  Spree::Image.attachment_definitions[:attachment][:default_style] = 'product'
 
 end
 
