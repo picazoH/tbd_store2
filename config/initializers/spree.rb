@@ -11,7 +11,7 @@ Spree.config do |config|
   config.default_country_id = 175
   config.admin_interface_logo = 'logo/admin_tobe_bg.png'
   config.logo = '2bD-logo.png'
-  config.allow_ssl_in_production = true
+  config.allow_ssl_in_production = false
   #SpreeSocialProducts Spree::Config.facebook_app_id = '572946162728681' Rails console
   config.address_requires_state = true
   config.allow_guest_checkout = false
