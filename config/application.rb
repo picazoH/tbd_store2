@@ -42,7 +42,7 @@ module TbdStore2
     #     :storage => :s3,
     #     :s3_host_name => 's3-eu-west-1.amazonaws.com',
     #     :s3_credentials => {
-    #         :bucket => 'raypa',
+    #         :bucket => ENV["S3_bucket_name"],
     #         :access_key_id => ENV["S3_access_key_id"],
     #         :secret_access_key => ENV["S3_secret_access_key"]
     #     }
