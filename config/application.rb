@@ -35,16 +35,16 @@ module TbdStore2
 
 
     #NEW S3 CONFIG with Paperclip
-    Paperclip::Attachment.default_options[:s3_protocol] = "http"
-    config.paperclip_defaults = {
-        :storage => :s3,
-        :s3_host_name => 's3-eu-west-1.amazonaws.com',
-        :s3_credentials => {
-            :bucket => 'raypa',
-            :access_key_id => ENV["S3_access_key_id"],
-            :secret_access_key => ENV["S3_secret_access_key"]
-        }
-    }
+    # Paperclip::Attachment.default_options[:s3_protocol] = "http"
+    # config.paperclip_defaults = {
+    #     :storage => :s3,
+    #     :s3_host_name => 's3-eu-west-1.amazonaws.com',
+    #     :s3_credentials => {
+    #         :bucket => 'raypa',
+    #         :access_key_id => ENV["S3_access_key_id"],
+    #         :secret_access_key => ENV["S3_secret_access_key"]
+    #     }
+    # }
 
   end
 
