@@ -76,3 +76,5 @@ gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us', :b
 gem 'spree_product_zoom', :git => 'https://github.com/spree-contrib/spree_product_zoom', :branch => '2-3-stable'
 
 gem 'spree_sitemap', :git => 'https://github.com/jdutil/spree_sitemap', :branch => '2-3-stable'
+
+#gem 'spree_bootstrap_frontend', :git => 'https://github.com/200Creative/spree_bootstrap_frontend', :branch => '2-3-stable'

@@ -4,13 +4,13 @@ SpreeContactUs.setup do |config|
 
   # ==> Mailer Configuration
   ActionMailer::Base.smtp_settings = {
-      :address              => "XXXX",
-      :port                 => 587,
-      :domain               => 'XXXXX',
-      :user_name            => 'XXXXX',
-      :password             => 'XXXXX',
-      :authentication       => 'plain',
-      :enable_starttls_auto => true
+      address:              ENV["ActionMailer_address"],
+      port:                 ENV["ActionMailer_port"],
+      domain:               ENV["ActionMailer_domain"],
+      user_name:            ENV["ActionMailer_user_name"],
+      password:             ENV["ActionMailer_password"],
+      authentication:       ENV["ActionMailer_authentication"],
+      enable_starttls_auto: ENV["ActionMailer_enable_starttls_auto"]
   }
 
   ActionMailer::Base.default_options = {
