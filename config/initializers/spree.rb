@@ -27,6 +27,7 @@ Spree.config do |config|
   #Spree::Image config
   # Spree::Image.attachment_definitions[:attachment][:styles] = ActiveSupport::JSON.decode('{"mini":"48x48\u003E","small":"100x100\u003E","product":"240x240\u003E","large":"600x600\u003E"}').symbolize_keys!
   # # Split environments
+  # https://gist.github.com/radar/e414c49579b393e4aafe, http://guides.spreecommerce.com/release_notes/spree_2_2_0.html
   # # Spree::Image.attachment_definitions[:attachment][:path] = "/#{Rails.env}/:id/:style/:basename.:extension"
   # Spree::Image.attachment_definitions[:attachment][:path] = "images/:id/:style/:basename.:extension"
   # Spree::Image.attachment_definitions[:attachment][:url] = '/spree/products/:id/:style/:basename.:extension'

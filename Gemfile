@@ -35,7 +35,7 @@ group :development do
 end
 
 group :production do
-  gem 'puma', '~> 2.9.1'
+  gem 'puma', '~> 2.9.2'
   gem 'newrelic_rpm'
   #gem 'therubyracer' no need it we have nodejs, only required for 0.70.x or later
 end
@@ -55,7 +55,7 @@ end
 gem 'non-stupid-digest-assets', :git => 'https://github.com/alexspeller/non-stupid-digest-assets', :branch => 'master'
 
 ### Spree Gems ###
-gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-3-stable'
+gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-3-stable' #Commits on Sep 19, 2014
 
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-3-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-3-stable'

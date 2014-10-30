@@ -282,7 +282,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
-    newrelic_rpm (3.9.5.251)
+    newrelic_rpm (3.9.6.257)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     offsite_payments (2.0.1)
@@ -304,7 +304,7 @@ GEM
     polyamorous (1.0.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
-    puma (2.9.1)
+    puma (2.9.2)
       rack (>= 1.1, < 2.0)
     rabl (0.9.4.pre1)
       activesupport (>= 2.3.14)
@@ -403,7 +403,7 @@ DEPENDENCIES
   mysql2
   newrelic_rpm
   non-stupid-digest-assets!
-  puma (~> 2.9.1)
+  puma (~> 2.9.2)
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
