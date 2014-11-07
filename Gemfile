@@ -40,6 +40,8 @@ group :production do
   #gem 'therubyracer' no need it we have nodejs, only required for 0.70.x or later
 end
 
+gem 'compass', '~> 0.12.7'
+gem 'compass-rails', '~> 2.0.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -77,4 +79,4 @@ gem 'spree_product_zoom', :git => 'https://github.com/spree-contrib/spree_produc
 
 gem 'spree_sitemap', :git => 'https://github.com/jdutil/spree_sitemap', :branch => '2-3-stable'
 
-#gem 'spree_bootstrap_frontend', :git => 'https://github.com/200Creative/spree_bootstrap_frontend', :branch => '2-3-stable'
+gem 'spree_bootstrap_frontend', :git => 'https://github.com/200Creative/spree_bootstrap_frontend', :branch => '2-3-stable'

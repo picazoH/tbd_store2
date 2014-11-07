@@ -21,6 +21,10 @@ module TbdStore23
       end
     end
 
+    #CloudFlare Middleware
+    #require "#{Rails.root}/lib/cloudflare-middleware"
+    #config.middleware.insert_before(ActionDispatch::RemoteIp, Rack::CloudFlareMiddleware)
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
