@@ -4,12 +4,14 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
+//= require jquery.payment
 //= require jquery_ujs
 
 //= require spree/frontend
 
-//= require_tree .
 //= require spree/frontend/spree_i18n
 //= require spree/frontend/spree_social_products
 //= require spree/product_zoom
+//** require bootstrap-sprockets
+//= require_tree .
+
