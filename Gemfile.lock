@@ -34,6 +34,15 @@ GIT
       spree_core (~> 2.3.0.beta)
 
 GIT
+  remote: https://github.com/picazoH/spree_mail_view.git
+  revision: e3ae93872b08e412b8b59c7f88826a55f540db44
+  branch: master
+  specs:
+    spree_mail_view (2.2.1)
+      mail_view
+      spree_core (>= 2.2.1)
+
+GIT
   remote: https://github.com/spree-contrib/spree_editor
   revision: b678210e3889776f3656f653733a4b06b178bdc9
   branch: 2-3-stable
@@ -293,6 +302,8 @@ GEM
       activesupport (>= 3.0.0)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mail_view (2.0.4)
+      tilt
     mime-types (2.4.3)
     mini_portile (0.6.1)
     minitest (5.4.2)
@@ -440,6 +451,7 @@ DEPENDENCIES
   spree_editor!
   spree_gateway!
   spree_i18n!
+  spree_mail_view!
   spree_product_zoom!
   spree_sitemap!
   spree_social_products!
