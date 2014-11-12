@@ -28,6 +28,7 @@ gem 'figaro', '~> 1.0.0'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 group :development do
+  #http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#spring
   gem 'spring'
   gem 'capistrano', '~> 3.2.1'
   gem 'capistrano-bundler', '~> 1.1.3'
