@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.19'
+gem 'rails', '3.2.21'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -50,7 +50,7 @@ group :test do
 end
 
 group :production do
-  gem 'puma', '~> 2.9.0'
+  gem 'puma', '~> 2.9.2'
   gem 'newrelic_rpm'
   #gem 'therubyracer' no need it we have nodejs, only required for 0.70.x or later
 end
@@ -73,7 +73,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 #OFFICIAL
-#36862f41dccdd30546fa2f47758df13868ec5213.  2 Sep 2014
+#3c46d141c5cb2bedced63596178a0a79df3f0c9e.  2.0.14.beta
 gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-0-stable'
 
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
