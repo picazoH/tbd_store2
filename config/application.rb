@@ -40,7 +40,7 @@ module TbdStore23
     # TO generate binstubs
     # rake rails:update:bin
 
-    #NEW S3 CONFIG with Paperclip
+    #NEW S3 CONFIG with Paperclip, https://gist.github.com/radar/e414c49579b393e4aafe, http://guides.spreecommerce.com/release_notes/spree_2_2_0.html
     # Paperclip::Attachment.default_options[:s3_protocol] = "http"
     # config.paperclip_defaults = {
     #     :storage => :s3,

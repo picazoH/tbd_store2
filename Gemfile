@@ -75,10 +75,20 @@ gem 'spree_editor', :git => 'https://github.com/spree-contrib/spree_editor', :br
 gem 'spree_social_products', :git => 'https://github.com/spree-contrib/spree_social_products.git', :branch => '2-3-stable'
 
 #NOT OFFICIAL
-gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us', :branch => 'master'
+gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us', :branch => '2-3-stable'
 
 gem 'spree_product_zoom', :git => 'https://github.com/spree-contrib/spree_product_zoom', :branch => '2-3-stable'
 
 gem 'spree_sitemap', :git => 'https://github.com/jdutil/spree_sitemap', :branch => '2-3-stable'
 
 gem 'spree_bootstrap_frontend', :git => 'https://github.com/200Creative/spree_bootstrap_frontend', :branch => '2-3-stable'
+
+#2BEDIGITAL
+#gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'
+#gem 'spree_kiala', :path => '../spree_kiala'
+
+#gem 'spree_sermepa', :git => 'https://github.com/picazoH/spree_sermepa.git', :branch => 'master'
+#gem 'spree_sermepa', :path => '../spree_sermepa'
+
+#gem 'spree_variant_all_options', :git => 'https://github.com/picazoH/spree_variant_all_options.git', :branch => 'master'
+#gem 'spree_variant_all_options', :path => '../spree/spree_variant_all_options'
