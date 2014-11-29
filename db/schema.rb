@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141107200322) do
+ActiveRecord::Schema.define(version: 20141129193232) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -308,6 +308,7 @@ ActiveRecord::Schema.define(version: 20141107200322) do
   add_index "spree_orders", ["confirmation_delivered"], name: "index_spree_orders_on_confirmation_delivered", using: :btree
   add_index "spree_orders", ["considered_risky"], name: "index_spree_orders_on_considered_risky", using: :btree
   add_index "spree_orders", ["created_by_id"], name: "index_spree_orders_on_created_by_id", using: :btree
+  add_index "spree_orders", ["guest_token"], name: "index_spree_orders_on_guest_token", using: :btree
   add_index "spree_orders", ["number"], name: "index_spree_orders_on_number", using: :btree
   add_index "spree_orders", ["ship_address_id"], name: "index_spree_orders_on_ship_address_id", using: :btree
   add_index "spree_orders", ["shipping_method_id"], name: "index_spree_orders_on_shipping_method_id", using: :btree

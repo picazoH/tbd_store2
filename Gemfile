@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.1.8'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use SCSS for stylesheets
@@ -37,7 +37,7 @@ group :development do
 end
 
 group :production do
-  gem 'puma', '~> 2.9.2'
+  gem 'puma', '~> 2.10.2'
   gem 'newrelic_rpm'
   #gem 'therubyracer' no need it we have nodejs, only required for 0.70.x or later
 end
@@ -59,7 +59,7 @@ gem 'compass-rails', '~> 2.0.0'
 gem 'non-stupid-digest-assets', :git => 'https://github.com/alexspeller/non-stupid-digest-assets', :branch => 'master'
 
 ### Spree Gems ###
-gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-3-stable' #Commits on Sep 19, 2014
+gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-3-stable' #Commits on Nov 26, 2014
 
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-3-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-3-stable'
