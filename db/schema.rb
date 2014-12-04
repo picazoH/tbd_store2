@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141129193232) do
+ActiveRecord::Schema.define(version: 20141201170305) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -175,6 +175,22 @@ ActiveRecord::Schema.define(version: 20141129193232) do
   add_index "spree_inventory_units", ["return_authorization_id"], name: "index_spree_inventory_units_on_return_authorization_id", using: :btree
   add_index "spree_inventory_units", ["shipment_id"], name: "index_inventory_units_on_shipment_id", using: :btree
   add_index "spree_inventory_units", ["variant_id"], name: "index_inventory_units_on_variant_id", using: :btree
+
+  create_table "spree_kiala_points", force: true do |t|
+    t.string   "shortkpid",    limit: 10,   null: false
+    t.integer  "order_id",                  null: false
+    t.string   "kpname",       limit: 50
+    t.string   "street",       limit: 300
+    t.string   "zip",          limit: 10
+    t.string   "city",         limit: 50
+    t.string   "locationhint", limit: 4000
+    t.string   "openinghours", limit: 167
+    t.string   "label",        limit: 30
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_kiala_points", ["order_id"], name: "index_kialaLS_on_order_id", using: :btree
 
   create_table "spree_line_items", force: true do |t|
     t.integer  "variant_id"

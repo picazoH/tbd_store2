@@ -66,6 +66,8 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 
 #i18n
 gem 'spree_i18n', :git => 'https://github.com/spree/spree_i18n.git', :branch => '2-3-stable'
+#gem 'spree_i18n', :git => 'https://github.com/picazoH/spree_i18n.git', :branch => '2-3-stable'
+#gem 'spree_i18n', :path => '../spree/spree_i18n'
 
 #SPREE CONTRIB
 gem 'spree_static_content', :git => 'https://github.com/spree-contrib/spree_static_content', :branch => '2-3-stable'
@@ -85,7 +87,7 @@ gem 'spree_bootstrap_frontend', :git => 'https://github.com/200Creative/spree_bo
 
 #2BEDIGITAL
 #gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'
-#gem 'spree_kiala', :path => '../spree_kiala'
+gem 'spree_kiala', :path => '../spree_kiala'
 
 #gem 'spree_sermepa', :git => 'https://github.com/picazoH/spree_sermepa.git', :branch => 'master'
 #gem 'spree_sermepa', :path => '../spree_sermepa'
