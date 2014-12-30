@@ -73,7 +73,7 @@ gem 'spree_i18n', :git => 'https://github.com/spree/spree_i18n.git', :branch => 
 gem 'spree_static_content', :git => 'https://github.com/spree-contrib/spree_static_content', :branch => '2-3-stable'
 
 gem 'spree_editor', :git => 'https://github.com/spree-contrib/spree_editor', :branch => '2-3-stable'
-#gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor.git', :branch => 'master', '~> 4.0.11'
+
 gem 'spree_social_products', :git => 'https://github.com/spree-contrib/spree_social_products.git', :branch => '2-3-stable'
 
 #NOT OFFICIAL
@@ -85,12 +85,14 @@ gem 'spree_sitemap', :git => 'https://github.com/jdutil/spree_sitemap', :branch 
 
 gem 'spree_bootstrap_frontend', :git => 'https://github.com/200Creative/spree_bootstrap_frontend', :branch => '2-3-stable'
 
-#2BEDIGITAL
-#gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'
-gem 'spree_kiala', :path => '../spree_kiala'
+gem 'spree_slider', :git => 'https://github.com/priviterag/spree_slider.git', :branch => 'master'
 
-#gem 'spree_sermepa', :git => 'https://github.com/picazoH/spree_sermepa.git', :branch => 'master'
+#2BEDIGITAL
+gem 'spree_kiala', :git => 'https://github.com/picazoH/spree_kiala.git', :branch => 'master'
+#gem 'spree_kiala', :path => '../spree_kiala'
+
+gem 'spree_sermepa', :git => 'https://github.com/picazoH/spree_sermepa.git', :branch => 'master'
 #gem 'spree_sermepa', :path => '../spree_sermepa'
 
-#gem 'spree_variant_all_options', :git => 'https://github.com/picazoH/spree_variant_all_options.git', :branch => 'master'
-#gem 'spree_variant_all_options', :path => '../spree/spree_variant_all_options'
+gem 'spree_variant_all_options', :git => 'https://github.com/picazoH/spree_variant_all_options.git', :branch => 'master'
+#gem 'spree_variant_all_options', :path => '../spree_variant_all_options'

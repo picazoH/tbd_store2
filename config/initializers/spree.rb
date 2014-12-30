@@ -36,6 +36,8 @@ Spree.config do |config|
 
 end
 
+#ActiveMerchant::Billing::Base.integration_mode = :test
+
 #Spree.user_class = "Spree::LegacyUser"
 Spree.user_class = "Spree::User"
 

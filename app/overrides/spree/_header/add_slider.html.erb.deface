@@ -1,0 +1,4 @@
+<!-- insert_after '#header[data-hook]'
+     disabled
+-->
+<%= yield :spree_slider %>

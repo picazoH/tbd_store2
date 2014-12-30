@@ -29,3 +29,8 @@ Rails.application.config.assets.precompile += %w( ckeditor/plugins/wsc/dialogs/c
 Rails.application.config.assets.precompile += %w( ckeditor/plugins/wsc/dialogs/tmp.html )
 Rails.application.config.assets.precompile += %w( ckeditor/plugins/wsc/dialogs/tmpFrameset.html )
 Rails.application.config.assets.precompile += %w( ckeditor/skins/moono/readme.md )
+
+### spree_editor ckeditor 4.1.1 ###
+Rails.application.config.assets.precompile += %w( ckeditor/config.js )
+Rails.application.config.assets.precompile += %w( ckeditor/styles.js )
+Rails.application.config.assets.precompile += %w( ckeditor/contents.css )

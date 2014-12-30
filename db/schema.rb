@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141201170305) do
+ActiveRecord::Schema.define(version: 20141210121960) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -717,6 +717,21 @@ ActiveRecord::Schema.define(version: 20141201170305) do
     t.string   "payment_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "spree_slides", force: true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.string   "link_url"
+    t.boolean  "published"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "position",           default: 0, null: false
+    t.integer  "product_id"
   end
 
   create_table "spree_state_changes", force: true do |t|
