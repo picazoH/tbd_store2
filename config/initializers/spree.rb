@@ -19,8 +19,8 @@ Spree.config do |config|
   config.company = true
 
   #inventory, stocks, shipping
-  config.track_inventory_levels = false
-  config.allow_backorder_shipping = true
+  config.track_inventory_levels = true
+  #removed in 2-4-stable config.allow_backorder_shipping = true
   config.shipping_instructions = true
   config.currency =  "EUR"
 

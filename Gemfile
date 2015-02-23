@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -44,46 +45,42 @@ end
 
 gem 'compass', '~> 0.12.7'
 gem 'compass-rails', '~> 2.0.0'
+
+gem 'aws-sdk', '~> 1.61.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'non-stupid-digest-assets', :git => 'https://github.com/alexspeller/non-stupid-digest-assets', :branch => 'master'
+#gem 'non-stupid-digest-assets', :git => 'https://github.com/alexspeller/non-stupid-digest-assets', :branch => 'master'
 
 ### Spree Gems ###
-gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-3-stable' #Commits on Nov 26, 2014
+gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-4-stable' #Commits on Feb 18, 2015  , 152938fd666173c8514da73a9a7bddabb26df25a
 
-gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-3-stable'
-gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-3-stable'
+gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
+gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
 
 #i18n
-gem 'spree_i18n', :git => 'https://github.com/spree/spree_i18n.git', :branch => '2-3-stable'
-#gem 'spree_i18n', :git => 'https://github.com/picazoH/spree_i18n.git', :branch => '2-3-stable'
+gem 'spree_i18n', :git => 'https://github.com/spree-contrib/spree_i18n', :branch => '2-4-stable'
 #gem 'spree_i18n', :path => '../spree/spree_i18n'
 
 #SPREE CONTRIB
-gem 'spree_static_content', :git => 'https://github.com/spree-contrib/spree_static_content', :branch => '2-3-stable'
+gem 'spree_static_content', :git => 'https://github.com/spree-contrib/spree_static_content', :branch => '2-4-stable'
 
-gem 'spree_editor', :git => 'https://github.com/spree-contrib/spree_editor', :branch => '2-3-stable'
+gem 'spree_editor', :git => 'https://github.com/spree-contrib/spree_editor', :branch => '2-4-stable'
 
-gem 'spree_social_products', :git => 'https://github.com/spree-contrib/spree_social_products.git', :branch => '2-3-stable'
+gem 'spree_social_products', :git => 'https://github.com/spree-contrib/spree_social_products.git', :branch => '2-4-stable'
 
 #NOT OFFICIAL
-gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us', :branch => '2-3-stable'
+gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us', :branch => '2-4-stable'
 
-gem 'spree_product_zoom', :git => 'https://github.com/spree-contrib/spree_product_zoom', :branch => '2-3-stable'
+gem 'spree_product_zoom', :git => 'https://github.com/spree-contrib/spree_product_zoom', :branch => 'master' #no 2-4-stable branch yet
 
-gem 'spree_sitemap', :git => 'https://github.com/jdutil/spree_sitemap', :branch => '2-3-stable'
+gem 'spree_sitemap', :git => 'https://github.com/spree-contrib/spree_sitemap.git', :branch => '2-4-stable'
 
-gem 'spree_bootstrap_frontend', :git => 'https://github.com/200Creative/spree_bootstrap_frontend', :branch => '2-3-stable'
+gem 'spree_bootstrap_frontend', :git => 'https://github.com/200Creative/spree_bootstrap_frontend', :branch => '2-4-stable'
 
 gem 'spree_slider', :git => 'https://github.com/priviterag/spree_slider.git', :branch => 'master'
 
