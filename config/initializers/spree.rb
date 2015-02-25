@@ -24,16 +24,6 @@ Spree.config do |config|
   config.shipping_instructions = true
   config.currency =  "EUR"
 
-  #Spree::Image config
-  # Spree::Image.attachment_definitions[:attachment][:styles] = ActiveSupport::JSON.decode('{"mini":"48x48\u003E","small":"100x100\u003E","product":"240x240\u003E","large":"600x600\u003E"}').symbolize_keys!
-  # # Split environments
-  # https://gist.github.com/radar/e414c49579b393e4aafe, http://guides.spreecommerce.com/release_notes/spree_2_2_0.html
-  # # Spree::Image.attachment_definitions[:attachment][:path] = "/#{Rails.env}/:id/:style/:basename.:extension"
-  # Spree::Image.attachment_definitions[:attachment][:path] = "images/:id/:style/:basename.:extension"
-  # Spree::Image.attachment_definitions[:attachment][:url] = '/spree/products/:id/:style/:basename.:extension'
-  # Spree::Image.attachment_definitions[:attachment][:default_url] = ''
-  # Spree::Image.attachment_definitions[:attachment][:default_style] = 'product'
-
 end
 
 #ActiveMerchant::Billing::Base.integration_mode = :test
@@ -43,3 +33,9 @@ Spree.user_class = "Spree::User"
 
 SpreeI18n::Config.available_locales = [:es, :en, :fr] # displayed on translation forms
 SpreeI18n::Config.supported_locales = [:es, :en, :fr] # displayed on frontend select box
+
+## Registramos la classe Ability
+Spree::Ability.register_ability(PurchaseAbility)
+
+#Spree::Config.country_configuration = [:RU, :ES]
+#Spree::Config.country_configuration.include? "ES".to_sym
