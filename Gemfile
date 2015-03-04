@@ -94,4 +94,6 @@ gem 'spree_sermepa', :git => 'https://github.com/picazoH/spree_sermepa.git', :br
 gem 'spree_variant_all_options', :git => 'https://github.com/picazoH/spree_variant_all_options.git', :branch => 'master'
 #gem 'spree_variant_all_options', :path => '../spree_variant_all_options'
 
-gem 'spree_store_locator', :git => 'https://github.com/picazoH/spree_store_locator.git', :branch => 'master'
+
+gem 'spree_store_locator', :git => 'https://github.com/sliaquat/spree_store_locator.git', :branch => 'master'
+

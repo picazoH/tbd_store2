@@ -9,8 +9,5 @@
 
  *= require_self
  *= require_tree .
- *= require spree/frontend/spree_static_content
- *= require spree/frontend/spree_social_products
- *= require spree/product_zoom
  *= require spree/frontend/bootstrap_frontend
 */
