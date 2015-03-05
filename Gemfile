@@ -57,7 +57,7 @@ gem 'aws-sdk', '~> 1.61.0'
 #gem 'non-stupid-digest-assets', :git => 'https://github.com/alexspeller/non-stupid-digest-assets', :branch => 'master'
 
 ### Spree Gems ###
-gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-4-stable' #Commits on Feb 18, 2015  , 152938fd666173c8514da73a9a7bddabb26df25a
+gem 'spree',  :git => 'https://github.com/spree/spree.git', branch: '2-4-stable' #Commits on Mar 4, 2015   , 99d1a896bf9a51c0a0bb95d976e26ec68b6ba60d
 
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
