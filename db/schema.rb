@@ -568,12 +568,6 @@ ActiveRecord::Schema.define(version: 20150305152222) do
   add_index "spree_promotion_actions", ["id", "type"], name: "index_spree_promotion_actions_on_id_and_type", using: :btree
   add_index "spree_promotion_actions", ["promotion_id"], name: "index_spree_promotion_actions_on_promotion_id", using: :btree
 
-  create_table "spree_promotion_categories", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "spree_promotion_rules", force: true do |t|
     t.integer  "promotion_id"
     t.integer  "user_id"
@@ -714,6 +708,22 @@ ActiveRecord::Schema.define(version: 20150305152222) do
   add_index "spree_reimbursements", ["order_id"], name: "index_spree_reimbursements_on_order_id", using: :btree
 
   create_table "spree_retail_stores", force: true do |t|
+    t.string   "address1",              default: "", null: false
+    t.string   "address2"
+    t.string   "city",                  default: "", null: false
+    t.string   "country",               default: "", null: false
+    t.float    "latitude",   limit: 24
+    t.float    "longitude",  limit: 24
+    t.string   "name"
+    t.string   "phone"
+    t.string   "state",                 default: "", null: false
+    t.string   "website"
+    t.string   "zip",                   default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_retail_stores2", force: true do |t|
     t.string   "address1",              default: "", null: false
     t.string   "address2"
     t.string   "city",                  default: "", null: false

@@ -33,9 +33,9 @@ Spree.user_class = "Spree::User"
 
 SpreeI18n::Config.available_locales = [:es, :en, :fr] # displayed on translation forms
 SpreeI18n::Config.supported_locales = [:es, :en, :fr] # displayed on frontend select box
-
+Spree::Frontend::Config[:locale] = :es
+Spree::Backend::Config[:locale] = :es
 ## Registramos la classe Ability
 Spree::Ability.register_ability(PurchaseAbility)
-
 #Spree::Config.country_configuration = [:RU, :ES]
 #Spree::Config.country_configuration.include? "ES".to_sym
