@@ -1,0 +1,32 @@
+<p class="help-block">Para recibir información sobre el estado del envío</p>
+
+<div class="form-group">
+  <label><%= t(:email) %></label><br>
+  <%= @order.user.email %> (<%= link_to t(:edit), spree.edit_account_path %>)</p>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-5">
+
+    <div class="form-group">
+      <%= form.label :phone, t(:phone), :class => 'control-label' %><span class="required">*</span>
+      <%= form.phone_field :phone, :class => 'form-control required' %>
+    </div>
+
+  </div>
+
+  <% if Spree::Config[:alternative_shipping_phone] %>
+
+    <div class="col-sm-7">
+
+      <div class="form-group">
+        <%= form.label :alternative_phone, t(:alternative_phone), :class => 'control-label' %>
+        <%= form.phone_field :alternative_phone, :class => 'form-control' %>
+      </div>
+
+    </div>
+
+  <% end %>
+
+</div>

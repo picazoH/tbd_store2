@@ -1,0 +1,20 @@
+<tr>
+  <th>
+    <% if variant.images.length == 0 %>
+      <%= mini_image(variant.product) %>
+    <% else %>
+      <%= image_tag(variant.images.first.attachment.url(:mini)) %>
+    <% end %>
+  </th>
+  <td>
+    <b><%= variant.product.name %></b>
+    <%= variant.option_values[0].presentation unless variant.option_values.empty? %>
+  </td>
+  <td class="price">
+    <% if line_item.quantity > 1%>
+      <%= line_item.quantity %>*
+    <% end %>
+    <%= line_item.single_money.to_html %>
+  </td>
+</tr>
+

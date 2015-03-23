@@ -1,0 +1,6 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">1. <%= t(:logged_in_as) %>  <%= @order.user.email %></h3>
+    <%= link_to t(:edit), spree.edit_account_path, class: 'panel-edit' %>
+  </div>
+</div>

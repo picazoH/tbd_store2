@@ -1,0 +1,89 @@
+// ICONS AND ILLUSTRATIONS
+
+// icons
+%i {
+    @include inline-block;
+    width: 20px; height: 20px;
+    vertical-align: middle;
+    @extend %ir;
+    background: url($sprite) no-repeat;
+}
+
+.i-space-right { margin-right: 10px;}
+.i-space-left { margin-left: 10px;}
+
+.logo {
+    @extend %i;
+    float: left;
+    width: 271px;
+    height: 104px;
+    padding: 0;
+    margin: 50px 0 0;
+}
+
+// Icon definitions
+.i-home             { @extend %i; width: 19px; height: 20px; background-position: 0 -200px; position: relative; top:-2px;}
+.i-search           { @extend %i; width: 19px; height: 20px; background-position: -40px -200px;}
+.i-phone            { @extend %i; width: 32px; height: 32px; background-position: -60px -200px;}
+.i-mail             { @extend %i; width: 32px; height: 32px; background-position: -100px -200px;}
+.i-location         { @extend %i; width: 32px; height: 32px; background-position: -140px -200px;}
+.i-secure           { @extend %i; width: 15px; height: 20px; background-position: -180px -200px;}
+.i-visa             { @extend %i; width: 57px; height: 30px; background-position: -200px -200px;}
+.i-mc               { @extend %i; width: 50px; height: 30px; background-position: -260px -200px;}
+.i-delivery         { @extend %i; width: 64px; height: 38px; background-position: -320px -200px;}
+.cart .i-delivery   { position: relative; top:-8px;}
+footer .i-delivery  { float: left;}
+.i-fb               { @extend %i; width: 36px; height: 36px; background-position: -390px -200px;}
+.i-tw               { @extend %i; width: 36px; height: 36px; background-position: -430px -200px;}
+.i-2bedigital       { @extend %i; width: 241px; height: 16px; background-position: 0 -300px;}
+.i-basket           { @extend %i; width: 20px; height: 22px; background-position: -250px -300px; position: absolute; top:50%; right:8px; margin-top: -11px;}
+.i-bin              { @extend %i; width: 11px; height: 12px; background-position: -320px -300px;}
+.i-refresh          { @extend %i; width: 13px; height: 13px; background-position: -340px -300px;}
+.i-prev             { @extend %i; width: 23px; height: 21px; background-position: -210px -400px; margin-top: -2px; margin-left: -10px;}
+.i-next             { @extend %i; width: 23px; height: 21px; background-position: -240px -400px; margin-top: -2px; margin-right: -10px;}
+
+// Arrows
+%i-arrow {
+    @include inline-block;
+    width: 0;
+    height: 0;
+    background: none;
+    border: 4px solid transparent;
+    vertical-align: middle;
+    @extend %ir;
+}
+
+.i-arrow-down  { @extend %i-arrow; border-top-color:    $gray; border-bottom-width: 0; position: relative; top:-2px}
+.i-arrow-up    { @extend %i-arrow; border-bottom-color: $gray; border-top-width:    0; }
+.i-arrow-right { @extend %i-arrow; border-left-color:   $gray; border-right-width:  0; }
+.i-arrow-left  { @extend %i-arrow; border-right-color:  $gray; border-left-width:   0; }
+
+// Icon with pseudo-element
+.video{
+    position: relative;
+}
+.video:before{
+    content: "";
+    @extend %i;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    background-position: -300px -100px;
+    margin: -30px 0 0 -30px;
+    pointer-events: none;
+}
+
+// Arrow links
+a:hover > .i-arrow-down  { border-top-color:    $grayDark; }
+a:hover > .i-arrow-up    { border-bottom-color: $grayDark; }
+a:hover > .i-arrow-right { border-left-color:   $grayDark; }
+a:hover > .i-arrow-left  { border-right-color:  $grayDark; }
+.active > a > .i-arrow-down  { border-top-color:    $blue; }
+.active > a > .i-arrow-up    { border-bottom-color: $blue; }
+.active > a > .i-arrow-right { border-left-color:   $blue; }
+.active > a > .i-arrow-left  { border-right-color:  $blue; }
+.btn-navbar .i-arrow-down,
+.btn-navbar:focus .i-arrow-down,
+.btn-navbar:hover .i-arrow-down { border-top-color: $white;}

@@ -1,0 +1,47 @@
+.cart-summary {
+  .box__head{
+    border-bottom: 2px solid $grayLighter;
+  }
+  .box__body{
+    padding: 20px;
+  }
+  th,
+  td{
+    padding: 5px;
+    font-weight: normal;
+    vertical-align: top;
+  }
+  th{
+    text-align: left;
+  }
+  .table{
+    .price{
+      text-align: right
+    }
+  }
+  .table--items{
+    margin-bottom: 10px;
+    th, td{
+      border: 0;
+    }
+    td{
+      padding-left: 20px
+    }
+    img{
+      max-width: 75px;
+    }
+  }
+  .table--totals{
+    th, td{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .total{
+      th, td{
+        font-size: $fontSizeLarge;
+        font-weight: bold;
+        border-top: 1px solid $grayLighter;
+      }
+    }
+  }
+}

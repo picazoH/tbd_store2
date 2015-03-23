@@ -1,0 +1,20 @@
+.sidebar ul.transversal-pages {
+    margin: 0 0 20px 0px;
+}
+.sidebar ul.transversal-pages ul {
+    margin: 0 0 20px 20px;
+}
+article.about {
+    margin-bottom: 50px;
+    font-family: $coustardFontFamily;
+}
+article.about h2,
+article.about h3 {
+    margin-top: 2em;
+}
+article.about h2{
+    font-size: $fontSizeHuge;
+}
+article.about h3 {
+    font-size: $fontSizeLarge;
+}

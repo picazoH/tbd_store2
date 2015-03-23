@@ -1,0 +1,132 @@
+.product-detail h1{
+    padding: 70px 0 0;
+}
+.product-detail h2{
+    @include inline-block;
+    margin: 0 10px 0 0;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $grayLight;
+}
+.product-detail form{
+    margin-bottom: 30px;
+}
+
+
+
+
+.product-detail ul.links li{
+    color: #3f943f;
+}
+.product-detail .add-to-cart{
+    margin-bottom: 10px;
+    border-bottom: 1px dotted $grayLighter;
+}
+.product-detail .add-to-cart .section{
+    float: left;
+    margin-right: 15px;
+    padding: 0 15px 0 0;
+    border-right: 1px dotted $grayLighter;
+}
+.product-detail .add-to-cart .section,
+.product-detail .add-to-cart .btn {
+    margin-bottom: 10px;
+}
+.product-detail .add-to-cart input[type="number"] {
+    @include inline-block;
+    width: 32px;
+    margin: 0;
+    padding: 6px 10px;
+}
+.product-detail .product-price div {
+    position: relative;
+    top: -3px;
+    @include inline-block;
+    font-family: $coustardFontFamily;
+    font-size: 30px;
+    color: $grayDark;
+}
+
+.variant-options,
+.variant-options .variant-option-values,
+.variant-options .variant-option-values li,
+.variant-options h2,
+.variant-options h2 label {
+    display: inline;
+}
+.variant-options h2 label {
+    cursor: default;
+}
+.variant-options .variant-option-values {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.variant-options .variant-option-values li a {
+    margin-right: 5px;
+    display: inline-block;
+    padding: 5px 6px;
+    font-weight: 500;
+    color: $graySemiDark;
+    text-decoration: none;
+    background-color: $grayLightest;
+}
+.variant-options .variant-option-values li a:hover,
+.variant-options .option-value.selected,
+.variant-options .option-value.in-stock:hover {
+    color: $white;
+    background-color: $grayLight;
+}
+
+.product-detail .description,
+.product-detail .product-properties{
+    margin-bottom: 30px;
+    font-family: $coustardFontFamily;
+}
+.product-detail .product-properties ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.product-detail .product-properties ul strong{
+    font-family: $baseFontFamily;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $grayLight;
+}
+
+.product-images .zoom-image{
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.product-images .zoom-image:before{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 24px;
+    width: 24px;
+    margin-top: -11px;
+    background: url($sprite) -280px -300px no-repeat;
+    content:"";
+}
+.product-thumbnails{
+    margin: 0 0 20px;
+}
+.product-thumbnails li {
+    float: none;
+    margin: 0 0 10px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+.product-thumbnails li:hover,
+.product-thumbnails li.active {
+    border-color: $grayLighter;
+}
+.product-thumbnails li a{
+    display: block;
+}

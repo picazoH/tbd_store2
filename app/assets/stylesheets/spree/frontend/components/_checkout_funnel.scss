@@ -1,0 +1,124 @@
+/*--------------------------------------*/
+/* CheckOut process
+/*--------------------------------------*/
+
+
+
+div[data-hook="checkout_progress"]{
+  text-align: center;
+  ol#checkout-step-address, ol#checkout-step-delivery, ol#checkout-step-payment{
+    padding-top: 10px;
+    margin-left: 0px;
+    list-style-image: none;
+    list-style-position: inside;
+    list-style-type: decimal;
+    li{
+      min-width: 110px;
+      color: $graySemiDark;
+      margin-right: 7px;
+      padding: 5px;
+      @include border-radius(8px);
+      @include box-shadow(none);
+      @include transition-duration(0.3s);
+      text-transform: uppercase;
+      &.last{
+        display: none;
+      }
+      &.next-last{
+        display: none;
+      }
+      &.current-first, &.current{
+        background-color: $grayLightest;
+        color: $graySemiDark;
+      }
+      &.completed-first, &.completed{
+        background-color: $btnBackground;
+        color: $white;
+        a {
+          color: $white;
+          &:hover {
+            color: $white;
+            background-color: none;
+            text-decoration: none;
+          }
+        }
+        &:hover{
+          background-color: darken($btnBackground, 5%);
+        }
+      }
+    }
+  }
+}
+
+
+form#checkout_form_address{
+  div[data-hook="billing_fieldset_wrapper"]{
+    margin-left: 0px;
+    fieldset#billing{
+      border: 0;
+      div[data-hook="billing_inner"]{
+        margin-top:12px;
+      }
+    }
+  }
+  div[data-hook="shipping_fieldset_wrapper"]{
+    fieldset#shipping{
+      border: 0;
+      p[data-hook="use_billing"]{
+        margin-bottom:0px;
+        margin-top: -15px;
+        background-color: #ffffff;
+        display: block;
+        input#order_use_billing{
+          margin-left: 0;
+          margin-right: 5px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  label{
+    display: inline;
+  }
+}
+
+
+form#checkout_form_address {
+  .form-buttons{
+    margin-left: 0;
+  }
+}
+
+fieldset#shipping_method, fieldset#payment{
+  border: 0;
+  legent{
+    margin-left: 0;
+  }
+  p label{
+    float: none;
+    display:block
+
+  }
+  textarea#order_special_instructions{
+    width: 80%;
+    height: 80px;
+  }
+}
+
+
+
+form#checkout_form_payment{
+  ul#payment-methods{
+    li{
+      list-style-image: none;
+      list-style-position: inside;
+      list-style-type: none;
+    }
+  }
+  input#term_of_use_check{
+    margin: 0;
+  }
+}
+
+
+

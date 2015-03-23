@@ -1,0 +1,23 @@
+#contact_us_left{
+  #contact_us_contact_message{
+    width: 80%;
+  }
+  #ConctacUs_needs{
+    width: 80%;
+  }
+  label{
+    display: inline;
+  }
+}
+
+#contact_us_right{
+  @media (min-width: 768px) {
+    padding-top: 150px;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+  address{
+    padding-top: 10px;
+  }
+}

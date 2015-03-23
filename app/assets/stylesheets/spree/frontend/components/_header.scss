@@ -1,0 +1,132 @@
+header{
+    margin-bottom: 30px;
+}
+header .container{
+    position: relative;
+}
+header .usertools{
+    position: absolute;
+    top:0;
+    right: 0;
+    font-family: $coustardFontFamily;
+    .usernav,
+    .languages{
+        float: left;
+        margin-left: 20px;
+    }
+    ul{
+        margin: 0;
+        padding: 5px 10px;
+        background-color: $purplegray;
+    }
+    li{
+        list-style-type: none;
+        float: left;
+        border-left: 1px solid #fff;
+        margin-left: 8px;
+        padding-left: 8px;
+        &:first-child{
+            border-left: 0;
+            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+    a{
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.mainnav{
+    margin-top: 50px;
+    padding: 30px 20px;
+    background-color: $purple;
+}
+.navbar{
+    margin: 8px 0 0 0;
+}
+.navbar .nav > li{
+    float: left;
+    margin-left: 20px;
+    font-family: $coustardFontFamily;
+    &:first-child{
+        margin-left: 0;
+    }
+}
+.navbar .nav > li > a{
+    @include inline-block;
+    padding: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    background: none;
+    @include text-shadow(none);
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus{
+    color: $grayDark;
+    background: none;
+    @include box-shadow(none);
+}
+
+header .search form{
+    margin: 0;
+    padding-right: 32px;
+    border: 2px solid $grayLighter;
+}
+header .search .input-append{
+    margin: 0;
+    width: 100%;
+}
+header .search input{
+    width: 100%;
+    min-height: 30px;
+    @include box-sizing(border-box);
+}
+header .search input,
+header .search .btn{
+    border: 0;
+}
+header .search .btn{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 32px;
+    text-align: center;
+}
+
+header .cart-info.btn{
+    position: relative;
+    height: 34px;
+    padding-right: 32px;
+    font-size: $baseFontSize;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: 2px solid $grayLighter;
+}
+header .cart-info.btn .price{
+    font-size: $fontSizeLarge;
+    font-weight: bold;
+}
+header .cart-info.btn em{
+    font-style: normal;
+}
+header .cart-info.btn .n-items{
+    position: absolute;
+    top:-12px;
+    right: -12px;
+    height: 24px;
+    min-width: 24px;
+    line-height: 24px;
+    font-family: $baseFontFamily;
+    color: #fff;
+    background-color: $purple;
+    border: 2px solid $white;
+    @include border-radius(50%);
+}
+
+

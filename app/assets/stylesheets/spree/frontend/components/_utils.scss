@@ -1,0 +1,91 @@
+// ABSTRACT HELPERS
+
+// General helpers
+.block { display: block; }
+.inb { @include inline-block; }
+.pr { position: relative; }
+.vh { visibility: hidden; }
+.ellipsis { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.oneline { white-space: nowrap; }
+.unb-hide { font: 0/0 a; overflow: hidden; }
+
+// Hide text (image replacement)
+%ir { font: 0/0 a; color: transparent; }
+
+// List of inline-block elements
+.inb-list {
+  letter-spacing: -.31em; // webkit: collapse white-space between units
+  word-spacing: -.43em\0; // IE9 + Opera
+  word-spacing: -.43em\9; // IE9
+  margin: 0;
+ }
+.inb-list > li, .inb-list-item {
+    @include inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+// variants w/ different margins
+.inb-list--xs { @extend .inb-list; margin-left:  -4px; }
+.inb-list--s  { @extend .inb-list; margin-left:  -8px; }
+.inb-list--m  { @extend .inb-list; margin-left: -12px; }
+.inb-list--l  { @extend .inb-list; margin-left: -16px; }
+.inb-list--xl { @extend .inb-list; margin-left: -20px; }
+
+.inb-list--xs > li,
+.inb-list--xs > .inb  { @extend .inb-list-item; margin-left:   4px; }
+.inb-list--s > li,
+.inb-list--s > .inb   { @extend .inb-list-item; margin-left:   8px; }
+.inb-list--m > li,
+.inb-list--m > .inb   { @extend .inb-list-item; margin-left:  12px; }
+.inb-list--l > li,
+.inb-list--l > .inb   { @extend .inb-list-item; margin-left:  16px; }
+.inb-list--xl > li,
+.inb-list--xl > .inb  { @extend .inb-list-item; margin-left:  20px; }
+
+// vertical aligns
+.inb-list--vtop > li,
+.inb-list--vtop > .inb { vertical-align: top; }
+
+// force items in one line
+.inb-list--oneline { white-space: nowrap; }
+  .inb-list--oneline > li { white-space: normal; }
+
+// auto inline-block for every child
+.inb-list--children--s { @extend .inb-list--s; }
+  .inb-list--children--s > * { @extend .inb-list-item; margin-left: 8px; vertical-align: top; }
+
+// separator
+.inb-list--separator { @extend .inb-list; }
+  .inb-list--separator > li { @extend .inb-list-item; }
+  .inb-list--separator > li + li  { margin-left: 30px; }
+  .inb-list--separator > li + li:before {
+    content: "";
+    position: absolute; top: 50%; left: -15px;
+    width: 1px;
+    height: 20px;
+    margin-top: -10px;
+    background: #ccc;
+  }
+
+
+// Item structure
+.item { @include clearfix(); }
+  .item-media { float: left; }
+  .item-media--separator {
+    @extend .item-media;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+    margin-right: 20px;
+  }
+  .item-body { display: block; overflow: hidden; }
+
+
+// vertical spaces
+.vspace--xs     { margin-bottom: 4px; }
+.vspace--s      { margin-bottom: 8px; }
+.vspace--m,
+input.vspace--m { margin-bottom: 12px; }
+.vspace--l,
+input.vspace--l { margin-bottom: 20px; }
+.vspace--xl     { margin-bottom: 30px; }

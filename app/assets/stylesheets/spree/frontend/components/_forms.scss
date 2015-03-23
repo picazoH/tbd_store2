@@ -1,0 +1,91 @@
+label{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.input-append .add-on:last-child,
+.input-append .btn:last-child,
+.input-append .btn-group:last-child>.dropdown-toggle {
+    @include border-radius(0);
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    height: auto;
+    padding: 6px 10px 3px;
+    font-size: 15px;
+    line-height: 21px;
+    color: $grayDark;
+    @include border-radius(0);
+}
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    border: 2px solid #ccc;
+    @include box-shadow(none);
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: $yellow;
+    @include box-shadow(none);
+}
+select{
+  margin-bottom: 20px;
+}
+.help-block.paddedtop{
+  padding-top: 20px;
+}
+.form-actions{
+  margin: 20px 0 0 0;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+label.radio,
+label.checkbox{
+  font-weight: normal;
+  text-transform: none;
+}

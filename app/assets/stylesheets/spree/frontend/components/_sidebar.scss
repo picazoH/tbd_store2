@@ -1,0 +1,46 @@
+.sidebar{
+    text-transform: uppercase;
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    h3,
+    h6{
+        margin: 0 0 10px;
+        font-size: $baseFontSize;
+        font-weight: 500;
+    }
+    ul,
+    li{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    ul{
+        margin: 0 0 40px 20px;
+    }
+    li{
+        margin: 3px 0;
+    }
+    li a,
+    li label{
+        font-size: $fontSizeSmall;
+        font-weight: bold;
+        color: $grayLight;
+    }
+    li.active a,
+    li.active label{
+        text-decoration: underline;
+    }
+    li a .nitems{
+        color: $grayLighter;
+    }
+    li label{
+        display: inline;
+    }
+    .banner{
+        margin-top: 30px;
+    }
+}

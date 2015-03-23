@@ -1,0 +1,50 @@
+.home-carousel{
+    margin-bottom: 30px;
+}
+
+.featured{
+    background-color: $grayLightest;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.featured .img{
+    position: relative;
+}
+.featured .img span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
+    color: #fff;
+    background: $black;
+    background: rgba(0, 0, 0, 0.5);
+    @include box-sizing(border-box);
+}
+.featured .description{
+    font-family: $coustardFontFamily;
+}
+.featured .description h2{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-size: $fontSizeHuger;
+    border-bottom: 1px dotted $grayLighter;
+}
+
+.home-blocks{
+    margin-bottom: 30px;
+}
+.home-blocks img{
+    display: block;
+}
+.home-blocks .texts{
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-family: $coustardFontFamily;
+}
+.home-blocks .texts.highlighted{
+    padding: 20px;
+    background-color: $grayLightest;
+}

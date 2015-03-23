@@ -1,0 +1,30 @@
+<div class="box">
+  <div class="head">
+    <h2>2. <%= t(:address_information) %></h2>
+    <% if @order.state != 'cart' %>
+      <%= link_to t(:edit), checkout_state_path(@order.checkout_steps.first), class: 'edit' %>
+  </div>
+
+  <div class="form">
+    <div class="show-info">
+      <h3><%= t(:shipping_address) %></h3>
+      <ul>
+        <li><%= @order.ship_address.firstname %> <%= @order.ship_address.lastname %> </li>
+        <li><%= @order.ship_address.address1 %>. <%= @order.ship_address.address2 unless @order.ship_address.address2.empty? %></li>
+        <li><%= @order.ship_address.city %>, <%= @order.ship_address.zipcode %> </li>
+        <li><%= @order.ship_address.country %></li>
+      </ul>
+    </div>
+    <div class="show-info">
+      <h3><%= t(:contact_info) %></h3>
+      <ul>
+        <li><%= @order.user.email %></li>
+        <li><%= @order.ship_address.phone %></li>
+      </ul>
+    </div>
+  </div>
+<% else %>
+  </div>
+<% end %>
+
+</div>

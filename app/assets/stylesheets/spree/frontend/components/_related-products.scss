@@ -1,0 +1,23 @@
+.related {
+    padding: 20px 0;
+    border-top: 1px dotted $grayLighter;
+}
+.related.var2 {
+    padding: 20px;
+    background-color: $grayLightest;
+}
+.related h2{
+    font-family: $coustardFontFamily;
+    font-size: 18px;
+    color: $purple;
+    text-transform: uppercase;
+    text-align: center;
+}
+.related .product-listing .thumbnail{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    min-height: 1px !important;
+}
+.related .product-listing .product-image{
+    border-left: 0;
+}

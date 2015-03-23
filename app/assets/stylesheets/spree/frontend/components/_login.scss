@@ -1,0 +1,37 @@
+.login{
+    &.login-alone{
+        margin: 50px auto;
+        max-width: 600px;
+    }
+    .remember{
+        margin-top: -10px;
+        a{
+            display: inline;
+            font-size: $fontSizeSmall;
+            font-weight: bold;
+            color: $grayLight;
+            text-transform: uppercase;
+        }
+    }
+    .checkbox{
+        margin-top: 5px;
+        font-size: $fontSizeSmall;
+        font-weight: bold;
+        color: $grayLight;
+        text-transform: uppercase;
+    }
+    .form-actions{
+        .btn{
+            float: left;
+            margin-right: 50px;
+        }
+    }
+    .register{
+        min-height: 250px;
+        padding-left: 20px;
+        border-left: 1px dotted $grayLighter;
+    }
+    .register h2{
+        font-family: $coustardFontFamily;
+    }
+}

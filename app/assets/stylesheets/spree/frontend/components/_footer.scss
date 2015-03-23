@@ -1,0 +1,49 @@
+footer .inner{
+    padding: 50px 0;
+    border-top: 1px dotted $grayLighter;
+}
+footer h4{
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $textColor;
+    text-transform: uppercase;
+}
+footer p,
+footer ul{
+    font-family: $coustardFontFamily;
+}
+footer p{
+    margin: 0 0 15px;
+}
+footer ul{
+    margin: 0 0 30px;
+    padding: 0;
+    list-style-type: none;
+}
+footer address{
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+footer .contact li{
+    margin-bottom: 15px;
+}
+footer .contact .phone{
+    font-size: $fontSizeLarge;
+}
+footer .payment li,
+footer .social li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.powered{
+    padding: 5px 0;
+    background: $purple;
+    border-top: 2px solid $purple;
+    text-align: center;
+}
+.powered a{
+    color: $white;
+}

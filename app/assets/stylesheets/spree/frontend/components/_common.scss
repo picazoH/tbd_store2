@@ -1,0 +1,71 @@
+body {
+    font-size: $baseFontSize;
+    font-family: $baseFontFamily;
+    color: $textColor;
+    -webkit-text-stroke: 1px transparent;
+    -webkit-font-smoothing: antialiased;
+    border-top: 4px solid $purplegray;
+}
+
+// General styles
+// --------------------------------------------------
+
+.ir{
+    @extend %ir;
+}
+
+h1, h2, h3{
+    margin: 0 0 15px;
+    font-weight: normal;
+}
+h1{
+    font-family: $coustardFontFamily;
+    font-size: 36px;
+    line-height: 42px;
+}
+h1.claim{
+    font-size: 26px;
+    line-height: 30px;
+}
+h2{
+    font-size: 20px;
+    line-height: 26px;
+}
+h3{
+    font-size: 18px;
+    line-height: 24px;
+    color: $graySemiDark;
+}
+h4{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+a{
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+// Scafolding
+// --------------------------------------------------
+#page{
+    padding: 0 15px;
+    background-color: #fff;
+}
+
+.content{
+    padding-bottom: 50px;
+}
+
+// Carets
+// --------------------------------------------------
+.caret{
+    border-top-color: $grayDark;
+    border-bottom-color: $grayDark;
+}
+.caret-white{
+    border-top-color: $white;
+    border-bottom-color: $white;
+}

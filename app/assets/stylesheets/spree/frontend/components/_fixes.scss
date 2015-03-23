@@ -1,0 +1,45 @@
+
+//--------------------------------------
+// Héctor Fixs
+//--------------------------------------
+
+//carousel with h1 to improve Seo
+.carousel-caption{
+  color: #FFFFFF;
+  line-height: 20px;
+  h1 {
+    font-family: $baseFontFamily;
+    font-size: $fontSizeLarge;
+    font-weight: bold;
+    margin: 0 0 5px;
+    line-height: 20px;
+  }
+}
+
+span.free-delivery-note{
+  padding-left: 70px;
+}
+
+
+/*--------------------------------------*/
+/* Reviews
+/*--------------------------------------*/
+form#new_review{
+  label{
+    display: inline;
+  }
+}
+
+/*--------------------------------------*/
+/* Search
+/*--------------------------------------*/
+.form-search .input-append .search-query {
+  @include border-radius(0);
+}
+
+header .search .input-append {
+  background-color: #FFFFFF;
+}
+
+
+

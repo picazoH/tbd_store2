@@ -1,0 +1,26 @@
+/*--------------------------------------*/
+/* Flash notices & errors
+/*--------------------------------------*/
+
+.errorExplanation, label.error {
+  @extend .alert-error;
+  @extend .alert;
+  p {
+    font-weight: normal;
+  }
+  ul {
+    list-style: disc outside;
+    margin-left: 30px;
+
+    li {
+      font-weight: normal;
+    }
+  }
+}
+span.required{
+  color: $errorText;
+}
+
+label.error, form#checkout_form_address label.error {
+  display: block;
+}

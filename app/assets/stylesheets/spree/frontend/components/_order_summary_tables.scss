@@ -1,0 +1,54 @@
+/*--------------------------------------*/
+/* Tables
+/*--------------------------------------*/
+
+/*--------------------------------------*/
+/* Order
+/*--------------------------------------*/
+
+div.account-my-orders table.order-summary{
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
+}
+
+
+#order_summary{
+  table#line-items{
+    thead tr th{
+      text-transform: uppercase;
+    }
+    tbody tr{
+      td{
+        vertical-align: middle;
+      }
+      td[data-hook="order_item_qty"]{
+        text-align: center;
+      }
+    }
+
+    tfoot{
+      tr td{
+        text-align: right;
+      }
+      &#order-total tr.total{
+        font-size: 18px;
+        font-weight: 400;
+        td.total{
+          //color: $graySemiDark;
+          font-weight: bold;
+        }
+      }
+
+    }
+    @media (max-width: 767px) {
+        thead tr th.price, thead tr th.qty,
+        tbody tr td[data-hook="order_item_price"],tbody tr td[data-hook="order_item_qty"] {
+          display: none;
+        }
+        tbody tr td.cart_item_image, tbody tr td.cart_item_image img{
+          width: 150px;
+        }
+    }
+  }
+}
