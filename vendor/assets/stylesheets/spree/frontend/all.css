@@ -3,11 +3,8 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *
-
- *= require spree/backend
-
- *= require_self
- *= require_tree .
- *= require spree/backend/spree_social_products
- *= require spree/backend/spree_store_locator
+ *= require spree/frontend/spree_static_content
+ *= require spree/frontend/spree_social_products
+ *= require spree/product_zoom
+ *= require spree/frontend/spree_store_locator
 */
