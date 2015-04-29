@@ -70,6 +70,6 @@ rerun.txt
 test_app
 .rvmrc
 **/coverage
-*/.sass-cache
 # Ignore application configuration
 /config/application.yml
+.sass-cache

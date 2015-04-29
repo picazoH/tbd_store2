@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">3. <%= t(:shipping_method) %></h3>
+    <% if @order.state != @order.checkout_steps.first && @order.state != 'cart' %>
+      <%= link_to t(:edit), checkout_state_path(@order.checkout_steps.second), class: 'edit'%>
+    <% end %>
+  </div>
+  <% if @order.state != @order.checkout_steps.first && @order.state != 'cart' %>
+    <div class="panel-body">
+      <div class="form">
+        <div class="show-info">
+          <ul>
+            <li><%= @order.shipping_method.name %>
+              <% # Shipping method price calculator
+                 @order.rate_hash.each do |shipping_method| %>
+                  <%if shipping_method.id == @order.shipping_method.id %><%= shipping_method.display_price.to_html %><% end %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+        <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present?%>
+          <% unless @order.special_instructions.blank? %>
+          <div class="show-info">
+            <h3><%= t(:shipping_instructions) %></h3>
+            <ul>
+             <li><em>”<%= @order.special_instructions %>”</em></li>
+            </ul>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
