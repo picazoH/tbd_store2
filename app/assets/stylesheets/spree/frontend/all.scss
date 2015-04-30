@@ -4,7 +4,9 @@
 @import "compass";
 
 $icon-font-path: "../../bootstrap/";
+// I gather this file is a starting point for the project.
 @import "bootstrap";
+@import "font-awesome";
 
 // Import all the variables into the main css file.
 
@@ -17,4 +19,4 @@ $icon-font-path: "../../bootstrap/";
 
 
 // Media queries
-@import "components/mediaqueries";
+/*@import "components/mediaqueries";*/

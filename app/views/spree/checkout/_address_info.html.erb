@@ -1,30 +1,44 @@
-<div class="box">
-  <div class="head">
-    <h2>2. <%= t(:address_information) %></h2>
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">2. <%= t(:address_information) %></h3>
     <% if @order.state != 'cart' %>
-      <%= link_to t(:edit), checkout_state_path(@order.checkout_steps.first), class: 'edit' %>
+      <%= link_to t(:edit), checkout_state_path(@order.checkout_steps.first), class: 'panel-edit' %>
+    <% end %>
   </div>
 
-  <div class="form">
-    <div class="show-info">
-      <h3><%= t(:shipping_address) %></h3>
-      <ul>
-        <li><%= @order.ship_address.firstname %> <%= @order.ship_address.lastname %> </li>
-        <li><%= @order.ship_address.address1 %>. <%= @order.ship_address.address2 unless @order.ship_address.address2.empty? %></li>
-        <li><%= @order.ship_address.city %>, <%= @order.ship_address.zipcode %> </li>
-        <li><%= @order.ship_address.country %></li>
-      </ul>
+  <% if @order.state != 'cart' %>
+
+    <div class="panel-body">
+
+      <div class="row">
+
+        <div class="col-sm-9">
+
+          <div class="fieldset">
+            <h4 class="legend"><%= Spree.t(:shipping_address) %></h4>
+            <ul>
+              <li><%= @order.ship_address.firstname %> <%= @order.ship_address.lastname %> </li>
+              <li><%= @order.ship_address.address1 %>. <%= @order.ship_address.address2 unless @order.ship_address.address2.empty? %></li>
+              <li><%= @order.ship_address.city %>, <%= @order.ship_address.zipcode %> </li>
+              <li><%= @order.ship_address.country %></li>
+            </ul>
+          </div>
+
+          <div class="fieldset">
+            <legend><%= Spree.t(:contact_info) %></legend>
+            <ul>
+              <li><%= @order.user.email %></li>
+              <li><%= @order.ship_address.phone %></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-    <div class="show-info">
-      <h3><%= t(:contact_info) %></h3>
-      <ul>
-        <li><%= @order.user.email %></li>
-        <li><%= @order.ship_address.phone %></li>
-      </ul>
-    </div>
-  </div>
-<% else %>
-  </div>
-<% end %>
+
+  <% end %>
 
 </div>

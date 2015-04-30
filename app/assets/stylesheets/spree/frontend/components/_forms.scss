@@ -1,11 +1,11 @@
 label{
-    text-transform: uppercase;
-    font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .input-append .add-on:last-child,
 .input-append .btn:last-child,
 .input-append .btn-group:last-child>.dropdown-toggle {
-    @include border-radius(0);
+  @include border-radius(0);
 }
 
 select,
@@ -25,12 +25,12 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-    height: auto;
-    padding: 6px 10px 3px;
-    font-size: 15px;
-    line-height: 21px;
-    color: $grayDark;
-    @include border-radius(0);
+  height: auto;
+  padding: 6px 10px 3px;
+  font-size: 15px;
+  line-height: 21px;
+  color: $grayDark;
+  @include border-radius(0);
 }
 select,
 textarea,
@@ -49,8 +49,8 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-    border: 2px solid #ccc;
-    @include box-shadow(none);
+  border: 2px solid #ccc;
+  @include box-shadow(none);
 }
 textarea:focus,
 input[type="text"]:focus,
@@ -68,24 +68,24 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-    border-color: $yellow;
-    @include box-shadow(none);
+  border-color: $yellow;
+  @include box-shadow(none);
 }
 select{
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 .help-block.paddedtop{
-  padding-top: 20px;
+padding-top: 20px;
 }
 .form-actions{
-  margin: 20px 0 0 0;
-  padding: 0;
-  background: none;
-  border: 0;
+margin: 20px 0 0 0;
+padding: 0;
+background: none;
+border: 0;
 }
 
 label.radio,
 label.checkbox{
-  font-weight: normal;
-  text-transform: none;
+font-weight: normal;
+text-transform: none;
 }

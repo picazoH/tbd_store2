@@ -18,7 +18,7 @@
 
           <fieldset id="shipping" data-hook="shipping_fieldset_wrapper">
 
-            <legend>Dirección de envío</legend>
+            <legend><%= Spree.t(:shipping_address) %></legend>
             <%= render :partial => 'spree/address/form', :locals => { :form => ship_form, :address_type => 'shipping', :address => @order.ship_address } %>
 
           </fieldset>
@@ -52,7 +52,15 @@
           </fieldset>
 
           <div class="btn-toolbar" data-hook="buttons">
-            <%= submit_tag "Continuar", :class => 'continue button btn btn-primary' %>
+            <%= submit_tag Spree.t(:save_and_continue), :class => 'btn btn-primary' %>
+            <% if try_spree_current_user %>
+              <div class="checkbox" >
+                <%= label_tag :save_user_address do %>
+                  <%= check_box_tag 'save_user_address', '1', try_spree_current_user.respond_to?(:persist_order_address) %>
+                  <%= t(:save_my_address) %>
+                <% end %>
+              </div>
+            <% end %>
           </div>
 
         </div>
