@@ -1,11 +1,21 @@
 .purchasing{
   .panel{
-    @include border-radius(0);
-    @include box-shadow(none);
+    border: $purchasing-panel-border-width $purchasing-panel-border-style $purchasing-panel-border-color;
+    @include border-radius($purchasing-panel-border-radius);
+    @include box-shadow($purchasing-panel-shadow);
+    overflow: hidden;
+    &--cart-summary {
+      .panel-body{
+        padding: $purchasing-panel-cart-body-padding;
+      }
+    }
   }
   .panel-heading{
     position: relative;
+    padding: $purchasing-panel-heading-padding;
+    background-color: $purchasing-panel-head-bg;
     border-bottom: 0;
+    @include border-radius(0);
   }
   .panel-title{
     margin: 0;
@@ -19,14 +29,22 @@
     right: 15px;
   }
   .panel-body{
-    padding: 30px;
-    border-top: 1px solid $panel-default-border;
+    padding: $purchasing-panel-body-padding;
+    border-top: $purchasing-panel-border-width $purchasing-panel-border-style $purchasing-panel-border-color;
   }
   fieldset,
   .fieldset{
     & + fieldset,
     & + .fieldset{
       margin-top: 30px;
+    }
+    ul{
+      padding-left: 0;
+      list-style-type: none;
+    }
+    li{
+      margin: 0;
+      padding: 0;
     }
   }
   .legend{
@@ -45,16 +63,65 @@
     }
   }
 
+  .table{
+    &--purchase{
+      margin-bottom: 0;
+      > tbody{
+        > tr{
+          > th,
+          > td{
+            padding: 5px;
+            font-weight: normal;
+            vertical-align: middle;
+          }
+          > th{
+            text-align: left;
+          }
+        }
+      }
+      .price{
+        text-align: right
+      }
 
+      &--items{
+        margin-bottom: 10px;
+        > tbody{
+          > tr{
+            > th,
+            > td{
+              border: 0;
+            }
+            > th{
+              width: 50px
+            }
+          }
+        }
+        img{
+          max-width: 50px;
+        }
+      }
 
-
-
-
-
-
-
-
-
+      &--totals{
+        > tbody{
+          > tr{
+            > th,
+            > td{
+              padding-top: 15px;
+              padding-bottom: 15px;
+            }
+            &.total{
+              > th,
+              > td{
+                font-size: $font-size-large;
+                font-weight: bold;
+                border-top: 1px solid $gray-lighter;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
 
   /*.ask-for-billing-address{
@@ -100,85 +167,6 @@
   }*/
 }
 
-/*.show-info{
-  margin: 30px;
-  h3{
-    margin-bottom: 0;
-    font-size: $baseFontSize;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  ul{
-    margin: 0;
-    list-style-type: none;
-  }
-  li{
-    margin: 0;
-    padding: 0;
-  }
-  + .show-info{
-    margin-top: -10px;
-  }
-}
 
-.panel-cart-summary {
-  .panel-body{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-.table-purchase{
-  > tbody{
-    > tr{
-      > th,
-      > td{
-        padding: 5px;
-        font-weight: normal;
-        vertical-align: middle;
-      }
-      > th{
-        text-align: left;
-      }
-    }
-  }
-  .price{
-    text-align: right
-  }
-}
-.table-purchase-items{
-  margin-bottom: 10px;
-  > tbody{
-    > tr{
-      > th,
-      > td{
-        border: 0;
-      }
-      > th{
-        width: 50px
-      }
-    }
-  }
-  img{
-    max-width: 50px;
-  }
-}
-.table-purchase-totals{
-  > tbody{
-    > tr{
-      > th,
-      > td{
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-      &.total{
-        > th,
-        > td{
-          font-size: $fontSizeLarge;
-          font-weight: bold;
-          border-top: 1px solid $grayLighter;
-        }
-      }
-    }
-  }
-}
-*/
+
+

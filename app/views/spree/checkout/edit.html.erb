@@ -1,5 +1,5 @@
 <% content_for :google_analytics do %>
-<%= render partial: 'spree/shared/google_checkout.js', locals: { order: @order, step_number: (@order.checkout_steps.index(@order.state) + 1) } %>
+  <%= render partial: 'spree/shared/google_checkout.js', locals: { order: @order, step_number: (@order.checkout_steps.index(@order.state) + 1) } %>
 <% end %>
 
 <div id="checkout" data-hook>
@@ -34,127 +34,6 @@
 
           <% end %>
 
-
-          <br><br><br>
-          ---
-          STATIC
-          ---
-          <br><br><br>
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">2. Shipping info</h3>
-              <a href="#" class="panel-edit">Edit</a>
-            </div>
-
-            <div class="panel-body">
-              <div class="show-info">
-                <h3>Shipping address</h3>
-                <ul>
-                  <li>Ricardo Valiente </li>
-                  <li>Gran vía, 76 2-2</li>
-                  <li>Barcelona, 08002 </li>
-                  <li>Spain</li>
-                </ul>
-              </div>
-              <div class="show-info">
-                <h3>Contact information</h3>
-                <ul>
-                  <li>ricardo@gmail.com</li>
-                  <li>+34 659 123 054</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">3. Shipping method</h3>
-              <a href="#" class="panel-edit">Edit</a>
-            </div>
-
-            <div class="panel-body">
-              <div class="purchase-form">
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="option" value="option1" checked>
-                    Kiala. Puntos de conveniencia. 0.00 €
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="option" value="option2">
-                    Redyser Transporte Urgente (24h en casa) 0.00 €
-                  </label>
-                </div>
-                <div class="radio disabled">
-                  <label>
-                    <input type="radio" name="option" value="option2">
-                    ASM 48/72 horas 0.00 €
-                  </label>
-                </div>
-                <div class="shipping-instructions row">
-                  <div class="col-sm-9">
-                    <div class="form-group">
-                      <label>Add shipping instructions, if necessary</label>
-                      <div class="controls">
-                        <textarea rows="5" class="form-control"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-actions">
-                  <button type="submit" class="btn btn-primary">Continuar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">3. Shipping method</h3>
-              <a href="#" class="panel-edit">Edit</a>
-            </div>
-
-            <div class="panel-body">
-              <div class="show-info">
-                <ul>
-                  <li>Redyser Transporte Urgente (24h en casa) 0.00 €</li>
-                </ul>
-              </div>
-              <div class="show-info">
-                <h3>Shipping instructions</h3>
-                <ul>
-                  <li><em>”The door code is 244 and then tap bell afterwards”</em></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">4. Payment info</h3>
-              <a href="#" class="panel-edit">Edit</a>
-            </div>
-
-            <div class="panel-body">
-              <div class="purchase-form">
-                <div class="form-group">
-                  <label class="radio">
-                    <input type="radio" name="option2" value="option1" checked>
-                    Pago por transferencia bancaria/Payment by bank transfer LA CAIXA, IBAN: ES63 2100 8662 51 0200022492
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="option2" value="option2">
-                    <img src="../images/cards.jpg" alt="Pago con tarjeta" title="Pago con tarjeta">
-                  </label>
-                </div>
-                <div class="form-actions">
-                  <button type="submit" class="btn btn-large">Place your order</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -162,11 +41,12 @@
     </div>
 
   </div>
+
 </div>
 
 <script>
-Spree.current_order_id = "<%= @order.number %>"
-Spree.current_order_token = "<%= @order.guest_token %>"
+  Spree.current_order_id = "<%= @order.number %>"
+  Spree.current_order_token = "<%= @order.guest_token %>"
 </script>
 
 <% if I18n.locale != :en %>

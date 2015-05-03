@@ -1,10 +1,10 @@
 @import "variables";
+@import "theme";
 
 // Compasss
 @import "compass";
 
 $icon-font-path: "../../bootstrap/";
-// I gather this file is a starting point for the project.
 @import "bootstrap";
 @import "font-awesome";
 

@@ -1,4 +1,4 @@
-<div class="panel panel-default panel-cart-summary">
+<div class="panel panel-default panel--cart-summary">
 
   <div class="panel-heading">
     <h3 class="panel-title"><%= Spree.t(:order_summary) %></h3>
@@ -7,7 +7,7 @@
 
   <div class="panel-body">
 
-    <table class="table table-purchase table-purchase-items">
+    <table class="table table--purchase table--purchase--items">
       <tbody>
         <% @order.line_items.each do |item_form| %>
           <%= render :partial => 'summary_item', :locals => { :variant => item_form.variant, :line_item => item_form } %>
@@ -15,9 +15,9 @@
       </tbody>
     </table>
 
-    <table class="table table-purchase table-purchase-totals">
+    <table class="table table--purchase table--purchase--totals">
       <tbody>
-        <tr data-hook="item_total">
+        <tr data-hook="item_total" class="subtotal">
           <th><%= Spree.t(:item_total) %></th>
           <td class="price"><%= order.display_item_total.to_html %></td>
         </tr>
