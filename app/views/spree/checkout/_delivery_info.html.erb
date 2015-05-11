@@ -8,24 +8,23 @@
   <% if @order.state != @order.checkout_steps.first && @order.state != 'cart' %>
     <div class="panel-body">
       <div class="fieldset">
+        <h4 class="legend">Envío 1: Paquete desde default</h4>
         <ul>
-          <li>
-            <%= @order.shipping_method.name %>
-            <% # Shipping method price calculator
-               @order.rate_hash.each do |shipping_method| %>
-                <%if shipping_method.id == @order.shipping_method.id %><%= shipping_method.display_price.to_html %><% end %>
-            <% end %>
-          </li>
+          <li>UPS Ground (EUR) (+ €8.00)</li>
         </ul>
       </div>
-      <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present?%>
-        <% unless @order.special_instructions.blank? %>
-        <div class="fieldset">
-          <h4 class="legend"><%= t(:shipping_instructions) %></h4>
-          <p><em>”<%= @order.special_instructions %>”</em></p>
-        </div>
-        <% end %>
-      <% end %>
+
+      <div class="fieldset">
+        <h4 class="legend">Envío 2: Paquete desde default</h4>
+        <ul>
+          <li>UPS Ground (EUR) (+ €8.00)</li>
+        </ul>
+      </div>
+
+      <div class="fieldset">
+        <h4 class="legend">Instrucciones de envío</h4>
+        <p>Toca la campanita al entrar</p>
+      </div>
     </div>
   <% end %>
 </div>

@@ -11,26 +11,60 @@
   </div>
 
   <div class="panel-body" data-hook="shipping_method_inner">
-
     <%= form.fields_for :shipments do |ship_form| %>
-      <div class="form-group">
-        <% ship_form.object.shipping_rates.each do |rate| %>
-          <div class="radio">
-            <label>
-              <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
-              <%= rate.name %> <b>(+ <%= rate.display_cost %>)</b>
-            </label>
-          </div>
-        <% end %>
-      </div>
+      <fieldset>
+        <legend data-hook="stock-location">
+          Envío 1:
+          <%= Spree.t(:package_from) %>
+          <strong class="stock-location-name" data-hook="stock-location-name"><%= ship_form.object.stock_location.name %></strong>
+        </legend>
+
+        <div class="form-group">
+          <% ship_form.object.shipping_rates.each do |rate| %>
+            <div class="radio">
+              <label>
+                <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
+                <%= rate.name %> <b>(+ <%= rate.display_cost %>)</b>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
+                <%= rate.name %> <b>(+ <%= rate.display_cost %>)</b>
+              </label>
+            </div>
+          <% end %>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend data-hook="stock-location">
+          Envío 2:
+          <%= Spree.t(:package_from) %>
+          <strong class="stock-location-name" data-hook="stock-location-name"><%= ship_form.object.stock_location.name %></strong>
+        </legend>
+
+        <div class="form-group">
+          <% ship_form.object.shipping_rates.each do |rate| %>
+            <div class="radio">
+              <label>
+                <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
+                <%= rate.name %> <b>(+ <%= rate.display_cost %>)</b>
+              </label>
+            </div>
+          <% end %>
+        </div>
+      </fieldset>
     <% end %>
 
     <% if Spree::Config[:shipping_instructions] %>
-      <br>
-      <div class="form-group">
-        <label for="special_instructions"><%= Spree.t(:shipping_instructions) %></label>
-        <%= form.text_area :special_instructions, :cols => 40, :rows => 4, :class => "form-control" %>
-      </div>
+      <fieldset>
+        <legend><%= Spree.t(:shipping_instructions) %></legend>
+        <div class="form-group">
+          <label for="special_instructions" class="sr-only"><%= Spree.t(:shipping_instructions) %></label>
+          <%= form.text_area :special_instructions, :cols => 40, :rows => 4, :class => "form-control" %>
+        </div>
+      </fieldset>
     <% end %>
 
     <div class="btn-toolbar" data-hook="buttons">

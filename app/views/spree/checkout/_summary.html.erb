@@ -7,13 +7,27 @@
 
   <div class="panel-body">
 
-    <table class="table table--purchase table--purchase--items">
-      <tbody>
-        <% @order.line_items.each do |item_form| %>
-          <%= render :partial => 'summary_item', :locals => { :variant => item_form.variant, :line_item => item_form } %>
-        <% end %>
-      </tbody>
-    </table>
+    <div class="fieldset">
+      <h4 class="legend">Envío 1: Paquete desde default</h4>
+      <table class="table table--purchase table--purchase--items">
+        <tbody>
+          <% @order.line_items.each do |item_form| %>
+            <%= render :partial => 'summary_item', :locals => { :variant => item_form.variant, :line_item => item_form } %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="fieldset">
+      <h4 class="legend">Envío 2: Paquete desde default</h4>
+      <table class="table table--purchase table--purchase--items">
+        <tbody>
+          <% @order.line_items.each do |item_form| %>
+            <%= render :partial => 'summary_item', :locals => { :variant => item_form.variant, :line_item => item_form } %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 
     <table class="table table--purchase table--purchase--totals">
       <tbody>

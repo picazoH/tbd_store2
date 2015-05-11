@@ -12,7 +12,7 @@
   }
   .panel-heading{
     position: relative;
-    padding: $purchasing-panel-heading-padding;
+    padding: $purchasing-panel-heading-padding-vertical $purchasing-panel-heading-padding-horizontal;
     background-color: $purchasing-panel-head-bg;
     border-bottom: 0;
     @include border-radius(0);
@@ -25,18 +25,19 @@
   }
   .panel-edit{
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: $purchasing-panel-heading-padding-vertical;
+    right: $purchasing-panel-heading-padding-horizontal;
   }
   .panel-body{
     padding: $purchasing-panel-body-padding;
     border-top: $purchasing-panel-border-width $purchasing-panel-border-style $purchasing-panel-border-color;
   }
   fieldset,
-  .fieldset{
+  .fieldset,
+  input[type="hidden"]{
     & + fieldset,
     & + .fieldset{
-      margin-top: 30px;
+      margin-top: ($line-height-computed * 2);
     }
     ul{
       padding-left: 0;
@@ -47,13 +48,15 @@
       padding: 0;
     }
   }
+  legend,
   .legend{
-    margin-bottom: $line-height-computed;
-    font-size: ($font-size-base * 1.5);
+    margin-bottom: ($line-height-computed / 2.5);
+    font-size: $font-size-base;
+    font-weight: bold;
     line-height: inherit;
-    color: $legend-color;
+    text-transform: uppercase;
+    color: $gray;
     border: 0;
-    border-bottom: 1px solid $legend-border-color;
   }
   .btn-toolbar{
     margin-top: 20px;
