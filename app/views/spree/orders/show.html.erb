@@ -1,53 +1,51 @@
 <%if flash[:notice] == t(:order_processed_successfully) %>
 
-    <div class="purchasing">
-      <div class="thanks">
-        <div class="box">
-
-          <i class="i-thanks" alt="<%=t('order_mailer.confirm_email.thanks')  %>"></i>
-
-          <h1><%= t(:new_order_completed) %></h1>
-          <p><%= t(:thanks_for_shopping_with_us) %></p>
+  <div class="purchasing">
+    <div class="purchasing__thanks">
+      <div class="purchasing__thanks__box">
+        <div class="purchasing__thanks__circle">
+          <i class="fa fa-truck"></i>
         </div>
-        <div class="share">
-          <p><%= t(:share_the_news) %></p>
-          <div class="btn-toolbar">
-
-            <%= render :partial => 'spree/shared/fb_order_complete' %>
-            <%= render :partial => 'spree/shared/tw_order_complete' %>
-
-          </div>
-        </div>
-        <p>
-          <%= t(:click_the_order_number) %>
-          <%= link_to order_url(@order) , :class => '' do %>
-              <strong><%= @order.number %></strong>
-          <% end %>
-          <%= t(:order_summary_and_email_txt) %>
-        </p>
+        <h1><%= t(:new_order_completed) %></h1>
+        <p><%= t(:thanks_for_shopping_with_us) %></p>
       </div>
+      <div class="share">
+        <h3><%= t(:share_the_news) %></h3>
+        <div class="btn-toolbar">
+          <%= render :partial => 'spree/shared/order_complete_facebook' %>
+          <%= render :partial => 'spree/shared/order_complete_twitter' %>
+        </div>
+      </div>
+      <p>
+        <%= t(:click_the_order_number) %>
+        <%= link_to order_url(@order) , :class => '' do %>
+            <strong><%= @order.number %></strong>
+        <% end %>
+        <%= t(:order_summary_and_email_txt) %>
+      </p>
     </div>
+  </div>
 
 <% else %>
 
-    <fieldset id="order_summary" data-hook>
-      <h1><%= Spree.t(:order_number, :number => @order.number) %></h1>
-      <% if order_just_completed?(@order) %>
-        <strong><%= Spree.t(:thank_you_for_your_order) %></strong>
-      <% end %>
+  <fieldset id="order_summary" data-hook>
+    <h1><%= Spree.t(:order_number, :number => @order.number) %></h1>
+    <% if order_just_completed?(@order) %>
+      <strong><%= Spree.t(:thank_you_for_your_order) %></strong>
+    <% end %>
 
-      <div id="order" data-hook>
-        <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
-        <br class="clear" />
-        <p data-hook="links">
-          <%= link_to Spree.t(:back_to_store), spree.root_path, :class => "btn" %>
-          <% unless order_just_completed?(@order) %>
-              <% if try_spree_current_user && respond_to?(:spree_account_path) %>
-                  <%= link_to Spree.t(:my_account), spree_account_path, :class => "btn" %>
-              <% end %>
+    <div id="order" data-hook>
+      <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
+      <br class="clear" />
+      <p data-hook="links">
+        <%= link_to Spree.t(:back_to_store), spree.root_path, :class => "btn" %>
+        <% unless order_just_completed?(@order) %>
+          <% if try_spree_current_user && respond_to?(:spree_account_path) %>
+            <%= link_to Spree.t(:my_account), spree_account_path, :class => "btn" %>
           <% end %>
-        </p>
-      </div>
-    </fieldset>
+        <% end %>
+      </p>
+    </div>
+  </fieldset>
 
 <% end %>

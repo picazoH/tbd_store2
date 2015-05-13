@@ -1,0 +1,9 @@
+<%
+  text_tw = t(:Just_bought) + @order.line_items.first.product.name + t(:Just_bought_for) +
+            @order.line_items.first.price.to_s + ' ' + @order.line_items.first.currency +
+            t(:Just_bought_amazing)
+%>
+
+<%= link_to 'Twitter', 'https://twitter.com/share', :class => 'btn btn-twitter twitter-share-button', :data =>
+            { :lang => locale.to_s, :count => 'none',:text => text_tw, :url => 'http://'+Spree::Config[:site_url] } %>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

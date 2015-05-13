@@ -9,11 +9,11 @@
   <td>
     <b><%= variant.product.name %></b>
     <%= variant.option_values[0].presentation unless variant.option_values.empty? %>
+    <% if line_item.quantity > 1%>
+      <br>x <%= line_item.quantity %>
+    <% end %>
   </td>
   <td class="price">
-    <% if line_item.quantity > 1%>
-      <%= line_item.quantity %>*
-    <% end %>
     <%= line_item.single_money.to_html %>
   </td>
 </tr>

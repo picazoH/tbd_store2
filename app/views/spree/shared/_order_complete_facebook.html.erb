@@ -1,0 +1,47 @@
+<%
+  text_fb = t(:Just_bought) + @order.line_items.first.product.name + t(:Just_bought_for) +
+            @order.line_items.first.price.to_s + ' ' + @order.line_items.first.currency +
+            t(:Just_bought_amazing)
+%>
+<% unless Spree::Config.facebook_app_id.nil? %>
+  <% content_for :head do %>
+    <meta property="og:title" content="<%= @order.line_items.first.product.name %>" />
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="<%= spree.product_url(@order.line_items.first.product) %>" />
+    <meta property="og:description" content="<%= @order.line_items.first.product.description %>" />
+    <% @order.line_items.first.product.images.each do |img| %>
+      <meta property="og:image" content="<%= absolute_image_url(img.attachment.url) %>" />
+    <% end  %>
+    <meta property="fb:app_id" content="<%= Spree::Config.facebook_app_id %>" />
+  <% end %>
+
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : "<%= Spree::Config.facebook_app_id %>", // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+
+      // Additional initialization code here
+    };
+
+    // Load the SDK Asynchronously
+    (function(d){
+      var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement('script'); js.id = id; js.async = true;
+      <% if (I18n.locale.to_s.include? "es") %>
+      js.src = "//connect.facebook.net/es_ES/all.js";
+      <% else %>
+      js.src = "//connect.facebook.net/en_US/all.js";
+      <% end %>
+
+      ref.parentNode.insertBefore(js, ref);
+    }(document));
+  </script>
+
+<div class="btn btn-facebook fb-like" data-href="<%= spree.product_url(@order.line_items.first.product) %>" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+<% end %>
