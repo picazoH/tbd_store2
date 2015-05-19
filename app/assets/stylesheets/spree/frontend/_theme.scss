@@ -8,5 +8,26 @@ $purchasing-panel-border-radius: 0;
 $purchasing-panel-head-bg: #F5F5F5;
 $purchasing-panel-shadow: none;
 
+$purchasing-panel-title-font-size: $font-size-large;
+$purchasing-panel-title-font-weight: bold;
+$purchasing-panel-title-text-transform: uppercase;
+
 $purchasing-panel-body-padding: 30px;
 $purchasing-panel-cart-body-padding: 20px;
+
+$purchasing-panel-legend-font-size: $font-size-base;
+$purchasing-panel-legend-font-weight: bold;
+$purchasing-panel-legend-text-transform: uppercase;
+$purchasing-panel-legend-color: $gray;
+$purchasing-panel-legend-border-width: 0;
+$purchasing-panel-legend-border-style: solid;
+$purchasing-panel-legend-border-color: transparent;
+
+$thanks-box-padding: 100px 50px 30px;
+$thanks-box-bg: $gray-lighter;
+$thanks-box-font-size: $font-size-large;
+$thanks-box-circle-bg: $gray;
+$thanks-box-circle-icon-color: #FFF;
+$thanks-share-border-width: 1px;
+$thanks-share-border-style: solid;
+$thanks-share-border-color: $gray-lighter;

@@ -19,9 +19,9 @@
   }
   .panel-title{
     margin: 0;
-    font-size: $font-size-large;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: $purchasing-panel-title-font-size;
+    font-weight: $purchasing-panel-title-font-weight;
+    text-transform: $purchasing-panel-title-text-transform;
   }
   .panel-edit{
     position: absolute;
@@ -51,12 +51,12 @@
   legend,
   .legend{
     margin-bottom: ($line-height-computed / 2.5);
-    font-size: $font-size-base;
-    font-weight: bold;
+    font-size: $purchasing-panel-legend-font-size;
+    font-weight: $purchasing-panel-legend-font-weight;
     line-height: inherit;
-    text-transform: uppercase;
-    color: $gray;
-    border: 0;
+    text-transform: $purchasing-panel-legend-text-transform;
+    color: $purchasing-panel-legend-color;
+    border: $purchasing-panel-legend-border-width $purchasing-panel-legend-border-style $purchasing-panel-legend-border-color;
   }
   .btn-toolbar{
     margin-top: 20px;
@@ -132,10 +132,10 @@
     &__box{
       position: relative;
       margin-bottom: 30px;
-      padding: 100px 50px 30px;
-      background-color: $gray-lighter;
+      padding: $thanks-box-padding;
+      background-color: $thanks-box-bg;
       p{
-        font-size: $font-size-large;
+        font-size: $thanks-box-font-size;
       }
     }
     &__circle{
@@ -144,12 +144,12 @@
       margin-left: -80px;
       @include size(160px, 160px);
       line-height: 210px;
-      background-color: $gray;
+      background-color: $thanks-box-circle-bg;
       border-radius: 100%;
     }
     i{
       font-size: 80px;
-      color: #FFF;
+      color: $thanks-box-circle-icon-color;
       @include transform(scaleX(-1));
       filter: FlipH;
       -ms-filter: "FlipH";
@@ -169,7 +169,3 @@
     }
   }
 }
-
-
-
-

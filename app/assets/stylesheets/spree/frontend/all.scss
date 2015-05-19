@@ -1,12 +1,15 @@
 @import "variables";
-@import "theme";
 
 // Compasss
 @import "compass";
 
+// Bootstrap
 $icon-font-path: "../../bootstrap/";
 @import "bootstrap";
 @import "font-awesome";
+
+// Theme
+@import "theme";
 
 // Import all the variables into the main css file.
 
